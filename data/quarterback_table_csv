@@ -1,0 +1,32 @@
+player_id,fname,lname,height,weight,draft_year,age,college,team_id,position_id
+1,Tua,Tagovailoa,73,217,2020,26,Alabama,18,1
+2,Jared,Goff,76,217,2016,29,Cal,6,1
+3,Dak,Prescott,74,238,2016,30,"Miss St",2,1
+4,Josh,Allen,77,237,2018,27,Wyoming,17,1
+5,Brock,Purdy,73,220,2022,24,"Iowa State",13,1
+6,Patrick,Mahomes,74,225,2017,28,"Texas Tech",29,1
+7,Jordan,Love,76,219,2020,25,"Utah State",7,1
+8,C.J.,Stroud,75,218,2023,22,"Ohio State",28,1
+9,Baker,Mayfield,73,215,2018,28,Oklahoma,9,1
+10,Trevor,Lawrence,78,220,2021,24,Clemson,25,1
+11,Matthew,Stafford,75,220,2009,36,Georgia,16,1
+12,Sam,Howell,73,220,2022,23,"North Carolina",4,1
+13,Derek,Carr,75,215,2014,32,"Fresno State",10,1
+14,Jalen,Hurts,73,223,2020,25,Oklahoma,1,1
+15,Lamar,Jackson,74,212,2018,27,Louisville,22,1
+16,Geno,Smith,75,221,2013,33,"West Virginia",14,1
+17,Gardner,Minshew,73,225,2019,27,"Washington St",27,1
+18,Justin,Herbert,78,236,2020,25,Oregon,30,1
+19,Russell,Wilson,71,215,2012,35,Wisconsin,31,1
+20,Bryce,Young,70,194,2023,22,Alabama,12,1
+21,Desmond,Ridder,75,207,2022,24,Cincinnati,11,1
+22,Justin,Fields,75,228,2021,25,"Ohio State",8,1
+23,Joshua,Dobbs,75,216,2017,29,Tennessee,5,1
+24,Joe,Burrow,76,215,2020,27,LSU,21,1
+25,Zach,Wilson,74,214,2021,24,BYU,20,1
+26,Aidan,O'Connell,75,210,2023,25,Purdue,32,1
+27,Mac,Jones,75,220,2021,25,Alabama,19,1
+28,Kenny,Pickett,75,220,2022,25,Pitt,23,1
+29,Will,Levis,76,229,2023,24,Kentucky,26,1
+30,Tyrod,Taylor,73,217,2011,34,VT,3,1
+31,Kyler,Murray,70,207,2019,26,Oklahoma,15,1

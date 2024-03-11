@@ -705,10 +705,567 @@ VALUES
 (63, 'Javonte', 'Williams', 71, 220, 2021, 22, 'North Carolina', (SELECT team_id FROM Team WHERE team_name = 'Broncos'), 2),
 (64, 'Josh', 'Jacobs', 70, 220, 2019, 24, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Raiders'), 2);
 
+-- Insert Wide Receivers
+INSERT INTO Player (player_id, fname, lname, height, weight, draft_year, age, college, team_id, position_id)
+VALUES
+-- NFC East
+(65, 'DeVonta', 'Smith', 72, 166, 2021, 23, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Eagles'), 3), 
+(66, 'Amari', 'Cooper', 73, 210, 2015, 28, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Cowboys'), 3),
+(67, 'Kenny', 'Golladay', 76, 218, 2017, 29, 'Northern Illinois', (SELECT team_id FROM Team WHERE team_name = 'Giants'), 3),
+(68, 'Terry', 'McLaurin', 72, 210, 2019, 26, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Commanders'), 3),
+
+-- NFC North
+(69, 'Justin', 'Jefferson', 73, 202, 2020, 22, 'LSU', (SELECT team_id FROM Team WHERE team_name = 'Vikings'), 3),
+(70, 'Tyrell', 'Williams', 75, 204, 2015, 30, 'Western Oregon', (SELECT team_id FROM Team WHERE team_name = 'Lions'), 3),
+(71, 'Davante', 'Adams', 73, 215, 2014, 30, 'Fresno State', (SELECT team_id FROM Team WHERE team_name = 'Packers'), 3),
+(72, 'Darnell', 'Mooney', 71, 175, 2020, 24, 'Tulane', (SELECT team_id FROM Team WHERE team_name = 'Bears'), 3),
+
+-- NFC South
+(73, 'Mike', 'Evans', 77, 231, 2014, 29, 'Texas A&M', (SELECT team_id FROM Team WHERE team_name = 'Buccaneers'), 3),
+(74, 'Michael', 'Thomas', 75, 212, 2016, 29, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Saints'), 3),
+(75, 'Calvin', 'Ridley', 73, 190, 2018, 27, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Falcons'), 3),
+(76, 'Robbie', 'Anderson', 75, 190, 2016, 29, 'Temple', (SELECT team_id FROM Team WHERE team_name = 'Panthers'), 3),
+
+-- NFC West
+(77, 'Deebo', 'Samuel', 71, 214, 2019, 25, 'South Carolina', (SELECT team_id FROM Team WHERE team_name = '49ers'), 3),
+(78, 'DK', 'Metcalf', 76, 229, 2019, 24, 'Ole Miss', (SELECT team_id FROM Team WHERE team_name = 'Seahawks'), 3),
+(79, 'Christian', 'Kirk', 70, 200, 2018, 26, 'Texas A&M', (SELECT team_id FROM Team WHERE team_name = 'Cardinals'), 3),
+(80, 'Cooper', 'Kupp', 74, 198, 2017, 28, 'Eastern Washington', (SELECT team_id FROM Team WHERE team_name = 'Rams'), 3),
+
+-- AFC East
+(81, 'Stefon', 'Diggs', 74, 191, 2015, 28, 'Maryland', (SELECT team_id FROM Team WHERE team_name = 'Bills'), 3),
+(82, 'Jaylen', 'Waddle', 68, 182, 2021, 23, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Dolphins'), 3),
+(83, 'Nelson', 'Agholor', 72, 198, 2015, 29, 'USC', (SELECT team_id FROM Team WHERE team_name = 'Patriots'), 3),
+(84, 'Corey', 'Davis', 75, 209, 2017, 27, 'Western Michigan', (SELECT team_id FROM Team WHERE team_name = 'Jets'), 3),
+
+-- AFC North
+(85, 'Ja\'Marr', 'Chase', 72, 201, 2021, 22, 'LSU', (SELECT team_id FROM Team WHERE team_name = 'Bengals'), 3),
+(86, 'Marquise', 'Brown', 69, 180, 2019, 24, 'Oklahoma', (SELECT team_id FROM Team WHERE team_name = 'Ravens'), 3),
+(87, 'Chase', 'Claypool', 76, 238, 2020, 23, 'Notre Dame', (SELECT team_id FROM Team WHERE team_name = 'Steelers'), 3),
+(88, 'Odell', 'Beckham Jr.', 72, 205, 2014, 29, 'LSU', (SELECT team_id FROM Team WHERE team_name = 'Browns'), 3),
+
+-- AFC South
+(89, 'A.J.', 'Brown', 74, 226, 2019, 24, 'Ole Miss', (SELECT team_id FROM Team WHERE team_name = 'Colts'), 3),
+(90, 'Julio', 'Jones', 75, 220, 2011, 33, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Titans'), 3),
+(91, 'D.J.', 'Chark', 75, 198, 2018, 25, 'LSU', (SELECT team_id FROM Team WHERE team_name = 'Jaguars'), 3),
+(92, 'Chris', 'Conley', 75, 213, 2015, 29, 'Georgia', (SELECT team_id FROM Team WHERE team_name = 'Texans'), 3),
+
+-- AFC West
+(93, 'Tyreek', 'Hill', 68, 185, 2016, 28, 'West Alabama', (SELECT team_id FROM Team WHERE team_name = 'Chiefs'), 3),
+(94, 'Keenan', 'Allen', 74, 211, 2013, 30, 'Cal', (SELECT team_id FROM Team WHERE team_name = 'Chargers'), 3),
+(95, 'Courtland', 'Sutton', 76, 216, 2018, 26, 'SMU', (SELECT team_id FROM Team WHERE team_name = 'Broncos'), 3),
+(96, 'Hunter', 'Renfrow', 70, 185, 2019, 26, 'Clemson', (SELECT team_id FROM Team WHERE team_name = 'Raiders'), 3);
+
+-- Insert Tight Ends
+INSERT INTO Player (player_id, fname, lname, height, weight, draft_year, age, college, team_id, position_id)
+VALUES
+-- NFC East
+(97, 'Zach', 'Ertz', 77, 250, 2013, 31, 'Stanford', (SELECT team_id FROM Team WHERE team_name = 'Eagles'), 4), 
+(98, 'Blake', 'Jarwin', 76, 260, 2017, 27, 'Oklahoma State', (SELECT team_id FROM Team WHERE team_name = 'Cowboys'), 4),
+(99, 'Evan', 'Engram', 76, 240, 2017, 27, 'Mississippi', (SELECT team_id FROM Team WHERE team_name = 'Giants'), 4),
+(100, 'Logan', 'Thomas', 78, 248, 2014, 30, 'Virginia Tech', (SELECT team_id FROM Team WHERE team_name = 'Commanders'), 4),
+
+-- NFC North
+(101, 'Kyle', 'Rudolph', 78, 265, 2011, 32, 'Notre Dame', (SELECT team_id FROM Team WHERE team_name = 'Vikings'), 4),
+(102, 'T.J.', 'Hockenson', 77, 248, 2019, 24, 'Iowa', (SELECT team_id FROM Team WHERE team_name = 'Lions'), 4),
+(103, 'Robert', 'Tonyan', 76, 237, 2017, 27, 'Indiana State', (SELECT team_id FROM Team WHERE team_name = 'Packers'), 4),
+(104, 'Jimmy', 'Graham', 78, 268, 2010, 35, 'Miami (FL)', (SELECT team_id FROM Team WHERE team_name = 'Bears'), 4),
+
+-- NFC South
+(105, 'Rob', 'Gronkowski', 78, 268, 2010, 33, 'Arizona', (SELECT team_id FROM Team WHERE team_name = 'Buccaneers'), 4),
+(106, 'Adam', 'Trautman', 78, 253, 2020, 24, 'Dayton', (SELECT team_id FROM Team WHERE team_name = 'Saints'), 4),
+(107, 'Kyle', 'Pitts', 80, 245, 2021, 21, 'Florida', (SELECT team_id FROM Team WHERE team_name = 'Falcons'), 4),
+(108, 'Ian', 'Thomas', 78, 260, 2018, 26, 'Indiana', (SELECT team_id FROM Team WHERE team_name = 'Panthers'), 4),
+
+-- NFC West
+(109, 'George', 'Kittle', 77, 250, 2017, 28, 'Iowa', (SELECT team_id FROM Team WHERE team_name = '49ers'), 4),
+(110, 'Will', 'Dissly', 76, 265, 2018, 25, 'Washington', (SELECT team_id FROM Team WHERE team_name = 'Seahawks'), 4),
+(111, 'Maxx', 'Williams', 78, 252, 2015, 27, 'Minnesota', (SELECT team_id FROM Team WHERE team_name = 'Cardinals'), 4),
+(112, 'Tyler', 'Higbee', 78, 255, 2016, 29, 'Western Kentucky', (SELECT team_id FROM Team WHERE team_name = 'Rams'), 4),
+
+-- AFC East
+(113, 'Dawson', 'Knox', 78, 254, 2019, 24, 'Ole Miss', (SELECT team_id FROM Team WHERE team_name = 'Bills'), 4),
+(114, 'Mike', 'Gesicki', 77, 250, 2018, 26, 'Penn State', (SELECT team_id FROM Team WHERE team_name = 'Dolphins'), 4),
+(115, 'Hunter', 'Henry', 78, 250, 2016, 27, 'Arkansas', (SELECT team_id FROM Team WHERE team_name = 'Patriots'), 4),
+(116, 'Chris', 'Herndon', 76, 253, 2018, 25, 'Miami (FL)', (SELECT team_id FROM Team WHERE team_name = 'Jets'), 4),
+
+-- AFC North
+(117, 'C.J.', 'Uzomah', 78, 260, 2015, 29, 'Auburn', (SELECT team_id FROM Team WHERE team_name = 'Bengals'), 4),
+(118, 'Mark', 'Andrews', 78, 256, 2018, 26, 'Oklahoma', (SELECT team_id FROM Team WHERE team_name = 'Ravens'), 4),
+(119, 'Eric', 'Ebron', 77, 250, 2014, 29, 'North Carolina', (SELECT team_id FROM Team WHERE team_name = 'Steelers'), 4),
+(120, 'Austin', 'Hooper', 76, 255, 2016, 27, 'Stanford', (SELECT team_id FROM Team WHERE team_name = 'Browns'), 4),
+
+-- AFC South
+(121, 'Rob', 'Gronkowski', 78, 268, 2010, 33, 'Arizona', (SELECT team_id FROM Team WHERE team_name = 'Colts'), 4),
+(122, 'Anthony', 'Firkser', 76, 244, 2017, 26, 'Harvard', (SELECT team_id FROM Team WHERE team_name = 'Titans'), 4),
+(123, 'Chris', 'Manhertz', 78, 255, 2016, 29, 'Canisius', (SELECT team_id FROM Team WHERE team_name = 'Jaguars'), 4),
+(124, 'Jordan', 'Akins', 76, 243, 2018, 29, 'UCF', (SELECT team_id FROM Team WHERE team_name = 'Texans'), 4),
+
+-- AFC West
+(125, 'Travis', 'Kelce', 77, 260, 2013, 32, 'Cincinnati', (SELECT team_id FROM Team WHERE team_name = 'Chiefs'), 4),
+(126, 'Jared', 'Cook', 78, 254, 2009, 35, 'South Carolina', (SELECT team_id FROM Team WHERE team_name = 'Chargers'), 4),
+(127, 'Noah', 'Fant', 76, 249, 2019, 24, 'Iowa', (SELECT team_id FROM Team WHERE team_name = 'Broncos'), 4),
+(128, 'Darren', 'Waller', 78, 255, 2015, 29, 'Georgia Tech', (SELECT team_id FROM Team WHERE team_name = 'Raiders'), 4);
+
+-- Insert Offensive Linemen
+INSERT INTO Player (player_id, fname, lname, height, weight, draft_year, age, college, team_id, position_id)
+VALUES
+-- NFC East
+(129, 'Lane', 'Johnson', 79, 317, 2013, 32, 'Oklahoma', (SELECT team_id FROM Team WHERE team_name = 'Eagles'), 5), -- OL
+(130, 'Zack', 'Martin', 76, 315, 2014, 31, 'Notre Dame', (SELECT team_id FROM Team WHERE team_name = 'Cowboys'), 5),
+(131, 'Andrew', 'Thomas', 78, 315, 2020, 22, 'Georgia', (SELECT team_id FROM Team WHERE team_name = 'Giants'), 5),
+(132, 'Brandon', 'Scherff', 77, 315, 2015, 30, 'Iowa', (SELECT team_id FROM Team WHERE team_name = 'Commanders'), 5),
+
+-- NFC North
+(133, 'Brian', 'O\'Neill', 80, 297, 2018, 26, 'Pittsburgh', (SELECT team_id FROM Team WHERE team_name = 'Vikings'), 5),
+(134, 'Taylor', 'Decker', 81, 312, 2016, 28, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Lions'), 5),
+(135, 'David', 'Bakhtiari', 76, 310, 2013, 30, 'Colorado', (SELECT team_id FROM Team WHERE team_name = 'Packers'), 5),
+(136, 'Cody', 'Whitehair', 76, 310, 2016, 30, 'Kansas State', (SELECT team_id FROM Team WHERE team_name = 'Bears'), 5),
+
+-- NFC South
+(137, 'Tristan', 'Wirfs', 80, 320, 2020, 22, 'Iowa', (SELECT team_id FROM Team WHERE team_name = 'Buccaneers'), 5),
+(138, 'Terron', 'Armstead', 81, 330, 2013, 30, 'Arkansas-Pine Bluff', (SELECT team_id FROM Team WHERE team_name = 'Saints'), 5),
+(139, 'Jake', 'Matthews', 77, 309, 2014, 30, 'Texas A&M', (SELECT team_id FROM Team WHERE team_name = 'Falcons'), 5),
+(140, 'Taylor', 'Motom', 77, 318, 2019, 24, 'Oklahoma', (SELECT team_id FROM Team WHERE team_name = 'Panthers'), 5),
+
+-- NFC West
+(141, 'Trent', 'Williams', 80, 320, 2010, 33, 'Oklahoma', (SELECT team_id FROM Team WHERE team_name = '49ers'), 5),
+(142, 'Duane', 'Brown', 76, 315, 2008, 36, 'Virginia Tech', (SELECT team_id FROM Team WHERE team_name = 'Seahawks'), 5),
+(143, 'Rodger', 'Saffold', 78, 323, 2010, 33, 'Indiana', (SELECT team_id FROM Team WHERE team_name = 'Cardinals'), 5),
+(144, 'Andrew', 'Whitworth', 79, 330, 2006, 40, 'LSU', (SELECT team_id FROM Team WHERE team_name = 'Rams'), 5),
+
+-- AFC East
+(145, 'Dion', 'Dawkins', 79, 321, 2017, 27, 'Temple', (SELECT team_id FROM Team WHERE team_name = 'Bills'), 5),
+(146, 'Austin', 'Jackson', 80, 324, 2020, 22, 'USC', (SELECT team_id FROM Team WHERE team_name = 'Dolphins'), 5),
+(147, 'Isaiah', 'Wynn', 77, 310, 2018, 26, 'Georgia', (SELECT team_id FROM Team WHERE team_name = 'Patriots'), 5),
+(148, 'Mekhi', 'Becton', 80, 363, 2020, 23, 'Louisville', (SELECT team_id FROM Team WHERE team_name = 'Jets'), 5),
+
+-- AFC North
+(149, 'Jonah', 'Williams', 77, 305, 2019, 24, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Bengals'), 5),
+(150, 'Orlando', 'Brown Jr.', 82, 345, 2018, 25, 'Oklahoma', (SELECT team_id FROM Team WHERE team_name = 'Ravens'), 5),
+(151, 'Kevin', 'Dotson', 76, 321, 2020, 23, 'Louisiana', (SELECT team_id FROM Team WHERE team_name = 'Steelers'), 5),
+(152, 'Jack', 'Conklin', 78, 308, 2016, 27, 'Michigan State', (SELECT team_id FROM Team WHERE team_name = 'Browns'), 5),
+
+-- AFC South
+(153, 'Quenton', 'Nelson', 76, 330, 2018, 25, 'Notre Dame', (SELECT team_id FROM Team WHERE team_name = 'Colts'), 5),
+(154, 'Rodger', 'Saffold', 78, 323, 2010, 33, 'Indiana', (SELECT team_id FROM Team WHERE team_name = 'Titans'), 5),
+(155, 'Cam', 'Robinson', 78, 320, 2017, 26, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Jaguars'), 5),
+(156, 'Laremy', 'Tunsil', 78, 313, 2016, 27, 'Ole Miss', (SELECT team_id FROM Team WHERE team_name = 'Texans'), 5),
+
+-- AFC West
+(157, 'Orlando', 'Brown', 82, 345, 2018, 25, 'Oklahoma', (SELECT team_id FROM Team WHERE team_name = 'Chiefs'), 5),
+(158, 'Rashawn', 'Slater', 77, 315, 2021, 22, 'Northwestern', (SELECT team_id FROM Team WHERE team_name = 'Chargers'), 5),
+(159, 'Garett', 'Bolles', 79, 300, 2017, 30, 'Utah', (SELECT team_id FROM Team WHERE team_name = 'Broncos'), 5),
+(160, 'Kolton', 'Miller', 80, 325, 2018, 26, 'UCLA', (SELECT team_id FROM Team WHERE team_name = 'Raiders'), 5);
+
+-- Insert Defensive Linemen
+INSERT INTO Player (player_id, fname, lname, height, weight, draft_year, age, college, team_id, position_id)
+VALUES
+-- NFC East
+(161, 'Fletcher', 'Cox', 77, 310, 2012, 31, 'Mississippi State', (SELECT team_id FROM Team WHERE team_name = 'Eagles'), 6),
+(162, 'Demarcus', 'Lawrence', 76, 265, 2014, 29, 'Boise State', (SELECT team_id FROM Team WHERE team_name = 'Cowboys'), 6),
+(163, 'Leonard', 'Williams', 77, 255, 2015, 28, 'USC', (SELECT team_id FROM Team WHERE team_name = 'Giants'), 6),
+(164, 'Chase', 'Young', 78, 264, 2020, 22, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Commanders'), 6),
+
+-- NFC North
+(165, 'Danielle', 'Hunter', 77, 252, 2015, 27, 'LSU', (SELECT team_id FROM Team WHERE team_name = 'Vikings'), 6),
+(166, 'Trey', 'Flowers', 76, 265, 2015, 29, 'Arkansas', (SELECT team_id FROM Team WHERE team_name = 'Lions'), 6),
+(167, 'Kenny', 'Clark', 75, 314, 2016, 26, 'UCLA', (SELECT team_id FROM Team WHERE team_name = 'Packers'), 6),
+(168, 'Akiem', 'Hicks', 76, 332, 2012, 33, 'Regina', (SELECT team_id FROM Team WHERE team_name = 'Bears'), 6),
+
+-- NFC South
+(169, 'Vita', 'Vea', 76, 347, 2018, 26, 'Washington', (SELECT team_id FROM Team WHERE team_name = 'Buccaneers'), 6),
+(170, 'Cameron', 'Jordan', 76, 287, 2011, 33, 'California', (SELECT team_id FROM Team WHERE team_name = 'Saints'), 6),
+(171, 'Grady', 'Jarrett', 73, 305, 2015, 29, 'Clemson', (SELECT team_id FROM Team WHERE team_name = 'Falcons'), 6),
+(172, 'Derrick', 'Brown', 76, 325, 2020, 23, 'Auburn', (SELECT team_id FROM Team WHERE team_name = 'Panthers'), 6),
+
+-- NFC West
+(173, 'Nick', 'Bosa', 76, 278, 2019, 24, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = '49ers'), 6),
+(174, 'Carlos', 'Dunlap', 78, 285, 2010, 33, 'Florida', (SELECT team_id FROM Team WHERE team_name = 'Seahawks'), 6),
+(175, 'J.J.', 'Watt', 77, 288, 2011, 33, 'Wisconsin', (SELECT team_id FROM Team WHERE team_name = 'Cardinals'), 6),
+(176, 'Aaron', 'Donald', 73, 280, 2014, 30, 'Pittsburgh', (SELECT team_id FROM Team WHERE team_name = 'Rams'), 6),
+
+-- AFC East
+(177, 'Ed', 'Oliver', 73, 287, 2019, 24, 'Houston', (SELECT team_id FROM Team WHERE team_name = 'Bills'), 6),
+(178, 'Christian', 'Wilkins', 76, 309, 2019, 25, 'Clemson', (SELECT team_id FROM Team WHERE team_name = 'Dolphins'), 6),
+(179, 'Matthew', 'Judon', 76, 275, 2016, 29, 'Grand Valley State', (SELECT team_id FROM Team WHERE team_name = 'Patriots'), 6),
+(180, 'Quinnen', 'Williams', 76, 303, 2019, 24, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Jets'), 6),
+
+-- AFC North
+(181, 'Sam', 'Hubbard', 76, 265, 2018, 26, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Bengals'), 6),
+(182, 'Calais', 'Campbell', 79, 300, 2008, 36, 'Miami (FL)', (SELECT team_id FROM Team WHERE team_name = 'Ravens'), 6),
+(183, 'Cameron', 'Heyward', 76, 295, 2011, 33, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Steelers'), 6),
+(184, 'Myles', 'Garrett', 76, 272, 2017, 26, 'Texas A&M', (SELECT team_id FROM Team WHERE team_name = 'Browns'), 6),
+
+-- AFC South
+(185, 'DeForest', 'Buckner', 77, 287, 2016, 26, 'Oregon', (SELECT team_id FROM Team WHERE team_name = 'Colts'), 6),
+(186, 'Jeffery', 'Simmons', 76, 305, 2019, 25, 'Mississippi State', (SELECT team_id FROM Team WHERE team_name = 'Titans'), 6),
+(187, 'Josh', 'Allen', 76, 262, 2019, 25, 'Kentucky', (SELECT team_id FROM Team WHERE team_name = 'Jaguars'), 6),
+(188, 'Whitney', 'Mercilus', 76, 265, 2012, 31, 'Illinois', (SELECT team_id FROM Team WHERE team_name = 'Texans'), 6),
+
+-- AFC West
+(189, 'Chris', 'Jones', 78, 310, 2016, 27, 'Mississippi State', (SELECT team_id FROM Team WHERE team_name = 'Chiefs'), 6),
+(190, 'Joey', 'Bosa', 77, 280, 2016, 26, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Chargers'), 6),
+(191, 'Maxx', 'Crosby', 77, 260, 2019, 24, 'Eastern Michigan', (SELECT team_id FROM Team WHERE team_name = 'Broncos'), 6),
+(192, 'Yannick', 'Ngakoue', 75, 245, 2016, 26, 'Maryland', (SELECT team_id FROM Team WHERE team_name = 'Raiders'), 6);
+
+-- Insert Linebackers
+INSERT INTO Player (player_id, fname, lname, height, weight, draft_year, age, college, team_id, position_id)
+VALUES
+-- NFC East
+(193, 'Darius', 'Leonard', 74, 230, 2018, 26, 'South Carolina State', (SELECT team_id FROM Team WHERE team_name = 'Eagles'), 7),
+(194, 'Leighton', 'Vander Esch', 77, 256, 2018, 25, 'Boise State', (SELECT team_id FROM Team WHERE team_name = 'Cowboys'), 7),
+(195, 'Blake', 'Martinez', 74, 237, 2016, 28, 'Stanford', (SELECT team_id FROM Team WHERE team_name = 'Giants'), 7),
+(196, 'Cole', 'Holcomb', 74, 234, 2019, 25, 'North Carolina', (SELECT team_id FROM Team WHERE team_name = 'Commanders'), 7),
+
+-- NFC North
+(197, 'Eric', 'Kendricks', 72, 232, 2015, 29, 'UCLA', (SELECT team_id FROM Team WHERE team_name = 'Vikings'), 7),
+(198, 'Jamie', 'Collins Sr.', 75, 250, 2013, 32, 'Southern Miss', (SELECT team_id FROM Team WHERE team_name = 'Lions'), 7),
+(199, 'DeVondre', 'Campbell', 76, 232, 2016, 29, 'Minnesota', (SELECT team_id FROM Team WHERE team_name = 'Packers'), 7),
+(200, 'Roquan', 'Smith', 73, 232, 2018, 24, 'Georgia', (SELECT team_id FROM Team WHERE team_name = 'Bears'), 7),
+
+-- NFC South
+(201, 'Lavonte', 'David', 73, 233, 2012, 31, 'Nebraska', (SELECT team_id FROM Team WHERE team_name = 'Buccaneers'), 7),
+(202, 'Demario', 'Davis', 74, 248, 2012, 32, 'Arkansas State', (SELECT team_id FROM Team WHERE team_name = 'Saints'), 7),
+(203, 'Deion', 'Jones', 73, 227, 2016, 27, 'LSU', (SELECT team_id FROM Team WHERE team_name = 'Falcons'), 7),
+(204, 'Haason', 'Reddick', 73, 235, 2017, 27, 'Temple', (SELECT team_id FROM Team WHERE team_name = 'Panthers'), 7),
+
+-- NFC West
+(205, 'Fred', 'Warner', 74, 236, 2018, 25, 'BYU', (SELECT team_id FROM Team WHERE team_name = '49ers'), 7),
+(206, 'Bobby', 'Wagner', 74, 243, 2012, 31, 'Utah State', (SELECT team_id FROM Team WHERE team_name = 'Seahawks'), 7),
+(207, 'Isaiah', 'Simmons', 76, 238, 2020, 22, 'Clemson', (SELECT team_id FROM Team WHERE team_name = 'Cardinals'), 7),
+(208, 'Kenny', 'Young', 74, 236, 2018, 27, 'UCLA', (SELECT team_id FROM Team WHERE team_name = 'Rams'), 7),
+
+-- AFC East
+(209, 'Tremaine', 'Edmunds', 76, 250, 2018, 24, 'Virginia Tech', (SELECT team_id FROM Team WHERE team_name = 'Bills'), 7),
+(210, 'Jerome', 'Baker', 74, 215, 2018, 25, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Dolphins'), 7),
+(211, 'Donta', 'Hightower', 75, 260, 2012, 31, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Patriots'), 7),
+(212, 'C.J.', 'Mosley', 74, 238, 2014, 29, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Jets'), 7),
+
+-- AFC North
+(213, 'Logan', 'Wilson', 74, 230, 2020, 25, 'Wyoming', (SELECT team_id FROM Team WHERE team_name = 'Bengals'), 7),
+(214, 'Patrick', 'Queen', 72, 232, 2020, 22, 'LSU', (SELECT team_id FROM Team WHERE team_name = 'Ravens'), 7),
+(215, 'T.J.', 'Watt', 76, 252, 2017, 27, 'Wisconsin', (SELECT team_id FROM Team WHERE team_name = 'Steelers'), 7),
+(216, 'Anthony', 'Walker', 74, 245, 2017, 26, 'Northwestern', (SELECT team_id FROM Team WHERE team_name = 'Browns'), 7),
+
+-- AFC South
+(217, 'Darius', 'Leonard', 74, 230, 2018, 26, 'South Carolina State', (SELECT team_id FROM Team WHERE team_name = 'Colts'), 7),
+(218, 'Jayon', 'Brown', 74, 226, 2017, 26, 'UCLA', (SELECT team_id FROM Team WHERE team_name = 'Titans'), 7),
+(219, 'Myles', 'Jack', 75, 244, 2016, 26, 'UCLA', (SELECT team_id FROM Team WHERE team_name = 'Jaguars'), 7),
+(220, 'Zach', 'Cunningham', 74, 230, 2017, 27, 'Vanderbilt', (SELECT team_id FROM Team WHERE team_name = 'Texans'), 7),
+
+-- AFC West
+(221, 'Denzel', 'Perryman', 71, 240, 2015, 29, 'Miami (FL)', (SELECT team_id FROM Team WHERE team_name = 'Chiefs'), 7),
+(222, 'Kenneth', 'Murray', 75, 241, 2020, 23, 'Oklahoma', (SELECT team_id FROM Team WHERE team_name = 'Chargers'), 7),
+(223, 'Alexander', 'Johnson', 74, 240, 2018, 30, 'Tennessee', (SELECT team_id FROM Team WHERE team_name = 'Broncos'), 7),
+(224, 'Nick', 'Kwiatkoski', 74, 242, 2016, 29, 'West Virginia', (SELECT team_id FROM Team WHERE team_name = 'Raiders'), 7);
+
+-- Insert Cornerbacks
+INSERT INTO Player (player_id, fname, lname, height, weight, draft_year, age, college, team_id, position_id)
+VALUES
+-- NFC East
+(225, 'Darius', 'Slay', 72, 190, 2013, 31, 'Mississippi State', (SELECT team_id FROM Team WHERE team_name = 'Eagles'), 8),
+(226, 'Trevon', 'Diggs', 74, 205, 2020, 23, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Cowboys'), 8),
+(227, 'James', 'Bradberry', 73, 212, 2016, 28, 'Samford', (SELECT team_id FROM Team WHERE team_name = 'Giants'), 8),
+(228, 'Kendall', 'Fuller', 71, 198, 2016, 27, 'Virginia Tech', (SELECT team_id FROM Team WHERE team_name = 'Commanders'), 8),
+
+-- NFC North
+(229, 'Patrick', 'Peterson', 73, 203, 2011, 32, 'LSU', (SELECT team_id FROM Team WHERE team_name = 'Vikings'), 8),
+(230, 'Jeff', 'Okudah', 73, 200, 2020, 22, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Lions'), 8),
+(231, 'Jaire', 'Alexander', 71, 196, 2018, 25, 'Louisville', (SELECT team_id FROM Team WHERE team_name = 'Packers'), 8),
+(232, 'Jaylon', 'Johnson', 72, 195, 2020, 23, 'Utah', (SELECT team_id FROM Team WHERE team_name = 'Bears'), 8),
+
+-- NFC South
+(233, 'Carlton', 'Davis', 74, 206, 2018, 25, 'Auburn', (SELECT team_id FROM Team WHERE team_name = 'Buccaneers'), 8),
+(234, 'Marshon', 'Lattimore', 72, 192, 2017, 26, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Saints'), 8),
+(235, 'A.J.', 'Terrell', 74, 195, 2020, 22, 'Clemson', (SELECT team_id FROM Team WHERE team_name = 'Falcons'), 8),
+(236, 'Donte', 'Jackson', 71, 180, 2018, 25, 'LSU', (SELECT team_id FROM Team WHERE team_name = 'Panthers'), 8),
+
+-- NFC West
+(237, 'Jalen', 'Ramsey', 73, 208, 2016, 27, 'Florida State', (SELECT team_id FROM Team WHERE team_name = '49ers'), 8),
+(238, 'Quandre', 'Diggs', 71, 198, 2015, 29, 'Texas', (SELECT team_id FROM Team WHERE team_name = 'Seahawks'), 8),
+(239, 'Byron', 'Murphy', 71, 185, 2019, 24, 'Washington', (SELECT team_id FROM Team WHERE team_name = 'Cardinals'), 8),
+(240, 'Jalen', 'Ramsey', 73, 208, 2016, 27, 'Florida State', (SELECT team_id FROM Team WHERE team_name = 'Rams'), 8),
+
+-- AFC East
+(241, 'Tre', 'Davious White', 71, 198, 2017, 27, 'LSU', (SELECT team_id FROM Team WHERE team_name = 'Bills'), 8),
+(242, 'Xavien', 'Howard', 72, 198, 2016, 28, 'Baylor', (SELECT team_id FROM Team WHERE team_name = 'Dolphins'), 8),
+(243, 'J.C.', 'Jackson', 71, 198, 2018, 26, 'Maryland', (SELECT team_id FROM Team WHERE team_name = 'Patriots'), 8),
+(244, 'Bryce', 'Hall', 74, 202, 2020, 23, 'Virginia', (SELECT team_id FROM Team WHERE team_name = 'Jets'), 8),
+
+-- AFC North
+(245, 'Marlon', 'Humphrey', 72, 197, 2017, 25, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Bengals'), 8),
+(246, 'Marcus', 'Peters', 72, 197, 2015, 29, 'Washington', (SELECT team_id FROM Team WHERE team_name = 'Ravens'), 8),
+(247, 'Joe', 'Haden', 71, 195, 2010, 33, 'Florida', (SELECT team_id FROM Team WHERE team_name = 'Steelers'), 8),
+(248, 'Greg', 'Newsome II', 73, 192, 2021, 21, 'Northwestern', (SELECT team_id FROM Team WHERE team_name = 'Browns'), 8),
+
+-- AFC South
+(249, 'Kenny', 'Moore II', 69, 190, 2017, 26, 'Valdosta State', (SELECT team_id FROM Team WHERE team_name = 'Colts'), 8),
+(250, 'Caleb', 'Farley', 74, 197, 2021, 21, 'Virginia Tech', (SELECT team_id FROM Team WHERE team_name = 'Titans'), 8),
+(251, 'A.J.', 'Bouye', 72, 191, 2013, 30, 'Central Florida', (SELECT team_id FROM Team WHERE team_name = 'Jaguars'), 8),
+(252, 'Terrance', 'Mitchell', 71, 191, 2014, 29, 'Oregon', (SELECT team_id FROM Team WHERE team_name = 'Texans'), 8),
+
+-- AFC West
+(253, 'Chris', 'Harris Jr.', 69, 199, 2011, 32, 'Kansas', (SELECT team_id FROM Team WHERE team_name = 'Chiefs'), 8),
+(254, 'Casey', 'Hayward', 71, 192, 2012, 32, 'Vanderbilt', (SELECT team_id FROM Team WHERE team_name = 'Chargers'), 8),
+(255, 'Bryce', 'Callahan', 68, 188, 2015, 30, 'Rice', (SELECT team_id FROM Team WHERE team_name = 'Broncos'), 8),
+(256, 'Damon', 'Arnette', 72, 195, 2020, 25, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Raiders'), 8);
+
+-- Insert Safeties
+INSERT INTO Player (player_id, fname, lname, height, weight, draft_year, age, college, team_id, position_id)
+VALUES
+-- NFC East
+(257, 'DAndre', 'Dinwiddie', 72, 202, 2019, 24, 'Tuskegee', (SELECT team_id FROM Team WHERE team_name = 'Eagles'), 9),
+(258, 'Donovan', 'Wilson', 73, 206, 2019, 24, 'Texas A&M', (SELECT team_id FROM Team WHERE team_name = 'Cowboys'), 9),
+(259, 'Logan', 'Ryan', 71, 195, 2013, 31, 'Rutgers', (SELECT team_id FROM Team WHERE team_name = 'Giants'), 9),
+(260, 'Landon', 'Collins', 72, 218, 2015, 28, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Commanders'), 9),
+
+-- NFC North
+(261, 'Harrison', 'Smith', 74, 214, 2012, 33, 'Notre Dame', (SELECT team_id FROM Team WHERE team_name = 'Vikings'), 9),
+(262, 'Tracy', 'Walker', 73, 206, 2018, 27, 'Louisiana', (SELECT team_id FROM Team WHERE team_name = 'Lions'), 9),
+(263, 'Adrian', 'Amos', 72, 214, 2015, 29, 'Penn State', (SELECT team_id FROM Team WHERE team_name = 'Packers'), 9),
+(264, 'Eddie', 'Jackson', 72, 204, 2017, 27, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Bears'), 9),
+
+-- NFC South
+(265, 'Antoine', 'Winfield Jr.', 70, 203, 2020, 23, 'Minnesota', (SELECT team_id FROM Team WHERE team_name = 'Buccaneers'), 9),
+(266, 'Malcolm', 'Jenkins', 72, 204, 2009, 34, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Saints'), 9),
+(267, 'Jaycee', 'Horn', 73, 205, 2021, 22, 'South Carolina', (SELECT team_id FROM Team WHERE team_name = 'Falcons'), 9),
+(268, 'Jeremy', 'Chinn', 76, 212, 2020, 23, 'Southern Illinois', (SELECT team_id FROM Team WHERE team_name = 'Panthers'), 9),
+
+-- NFC West
+(269, 'Tyrann', 'Mathieu', 69, 180, 2013, 30, 'LSU', (SELECT team_id FROM Team WHERE team_name = '49ers'), 9),
+(270, 'Quandre', 'Diggs', 71, 198, 2015, 29, 'Texas', (SELECT team_id FROM Team WHERE team_name = 'Seahawks'), 9),
+(271, 'Budda', 'Baker', 70, 195, 2017, 26, 'Washington', (SELECT team_id FROM Team WHERE team_name = 'Cardinals'), 9),
+(272, 'Jordan', 'Fuller', 72, 203, 2020, 24, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Rams'), 9),
+
+-- AFC East
+(273, 'Micah', 'Hyde', 72, 196, 2013, 31, 'Iowa', (SELECT team_id FROM Team WHERE team_name = 'Bills'), 9),
+(274, 'Justin', 'Coleman', 71, 190, 2015, 29, 'Tennessee', (SELECT team_id FROM Team WHERE team_name = 'Dolphins'), 9),
+(275, 'Devin', 'McCourty', 71, 205, 2010, 34, 'Rutgers', (SELECT team_id FROM Team WHERE team_name = 'Patriots'), 9),
+(276, 'Marcus', 'Maye', 72, 207, 2017, 28, 'Florida', (SELECT team_id FROM Team WHERE team_name = 'Jets'), 9),
+
+-- AFC North
+(277, 'Jessie', 'Bates III', 73, 200, 2018, 25, 'Wake Forest', (SELECT team_id FROM Team WHERE team_name = 'Bengals'), 9),
+(278, 'Chuck', 'Clark', 72, 205, 2017, 26, 'Virginia Tech', (SELECT team_id FROM Team WHERE team_name = 'Ravens'), 9),
+(279, 'Minkah', 'Fitzpatrick', 72, 207, 2018, 25, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Steelers'), 9),
+(280, 'John', 'Johnson III', 72, 205, 2017, 26, 'Boston College', (SELECT team_id FROM Team WHERE team_name = 'Browns'), 9),
+
+-- AFC South
+(281, 'Kenny', 'Moore II', 69, 190, 2017, 26, 'Valdosta State', (SELECT team_id FROM Team WHERE team_name = 'Colts'), 9),
+(282, 'Kevin', 'Byard', 71, 216, 2016, 28, 'Middle Tennessee', (SELECT team_id FROM Team WHERE team_name = 'Titans'), 9),
+(283, 'Jarrod', 'Wilson', 74, 200, 2016, 28, 'Michigan', (SELECT team_id FROM Team WHERE team_name = 'Jaguars'), 9),
+(284, 'Lonnie', 'Johnson Jr.', 74, 213, 2019, 24, 'Kentucky', (SELECT team_id FROM Team WHERE team_name = 'Texans'), 9),
+
+-- AFC West
+(285, 'Tyrann', 'Mathieu', 69, 180, 2013, 30, 'LSU', (SELECT team_id FROM Team WHERE team_name = 'Chiefs'), 9),
+(286, 'Derwin', 'James', 74, 212, 2018, 25, 'Florida State', (SELECT team_id FROM Team WHERE team_name = 'Chargers'), 9),
+(287, 'Justin', 'Simmons', 74, 201, 2016, 27, 'Boston College', (SELECT team_id FROM Team WHERE team_name = 'Broncos'), 9),
+(288, 'Johnathan', 'Abram', 72, 205, 2019, 25, 'Mississippi State', (SELECT team_id FROM Team WHERE team_name = 'Raiders'), 9);
+
+-- Insert Kickers
+INSERT INTO Player (player_id, fname, lname, height, weight, draft_year, age, college, team_id, position_id)
+VALUES
+-- NFC East
+(289, 'Jake', 'Elliott', 70, 167, 2017, 26, 'Memphis', (SELECT team_id FROM Team WHERE team_name = 'Eagles'), 10), -- K
+(290, 'Greg', 'Zuerlein', 72, 194, 2012, 34, 'Missouri Western', (SELECT team_id FROM Team WHERE team_name = 'Cowboys'), 10),
+(291, 'Graham', 'Gano', 72, 202, 2009, 35, 'Florida State', (SELECT team_id FROM Team WHERE team_name = 'Giants'), 10),
+(292, 'Chris', 'Boswell', 72, 185, 2014, 30, 'Rice', (SELECT team_id FROM Team WHERE team_name = 'Commanders'), 10),
+
+-- NFC North
+(293, 'Greg', 'Joseph', 74, 210, 2018, 27, 'Florida Atlantic', (SELECT team_id FROM Team WHERE team_name = 'Vikings'), 10),
+(294, 'Riley', 'Patterson', 73, 185, 2021, 22, 'Memphis', (SELECT team_id FROM Team WHERE team_name = 'Lions'), 10),
+(295, 'Mason', 'Crosby', 73, 207, 2007, 37, 'Colorado', (SELECT team_id FROM Team WHERE team_name = 'Packers'), 10),
+(296, 'Eddy', 'Pineiro', 72, 182, 2018, 26, 'Florida', (SELECT team_id FROM Team WHERE team_name = 'Bears'), 10),
+
+-- NFC South
+(297, 'Ryan', 'Succop', 74, 218, 2009, 35, 'South Carolina', (SELECT team_id FROM Team WHERE team_name = 'Buccaneers'), 10),
+(298, 'Wil', 'Lutz', 72, 184, 2016, 27, 'Georgia State', (SELECT team_id FROM Team WHERE team_name = 'Saints'), 10),
+(299, 'Younghoe', 'Koo', 68, 185, 2017, 27, 'Georgia Southern', (SELECT team_id FROM Team WHERE team_name = 'Falcons'), 10),
+(300, 'Joey', 'Slye', 73, 213, 2019, 25, 'Virginia Tech', (SELECT team_id FROM Team WHERE team_name = 'Panthers'), 10),
+
+-- NFC West
+(301, 'Robbie', 'Gould', 72, 219, 2005, 39, 'Penn State', (SELECT team_id FROM Team WHERE team_name = '49ers'), 10),
+(302, 'Jason', 'Myers', 73, 190, 2012, 31, 'Marist', (SELECT team_id FROM Team WHERE team_name = 'Seahawks'), 10),
+(303, 'Matt', 'Prater', 75, 205, 2006, 37, 'UCF', (SELECT team_id FROM Team WHERE team_name = 'Cardinals'), 10),
+(304, 'Matt', 'Gay', 73, 232, 2019, 24, 'Utah', (SELECT team_id FROM Team WHERE team_name = 'Rams'), 10),
+
+-- AFC East
+(305, 'Tyler', 'Bass', 70, 183, 2020, 24, 'Georgia Southern', (SELECT team_id FROM Team WHERE team_name = 'Bills'), 10),
+(306, 'Jason', 'Sanders', 71, 185, 2018, 26, 'New Mexico', (SELECT team_id FROM Team WHERE team_name = 'Dolphins'), 10),
+(307, 'Nick', 'Folk', 73, 211, 2007, 37, 'Arizona', (SELECT team_id FROM Team WHERE team_name = 'Patriots'), 10),
+(308, 'Eddy', 'Pineiro', 72, 182, 2018, 26, 'Florida', (SELECT team_id FROM Team WHERE team_name = 'Jets'), 10),
+
+-- AFC North
+(309, 'Evan', 'McPherson', 73, 185, 2021, 22, 'Florida', (SELECT team_id FROM Team WHERE team_name = 'Bengals'), 10),
+(310, 'Justin', 'Tucker', 72, 183, 2012, 32, 'Texas', (SELECT team_id FROM Team WHERE team_name = 'Ravens'), 10),
+(311, 'Chris', 'Boswell', 72, 185, 2014, 30, 'Rice', (SELECT team_id FROM Team WHERE team_name = 'Steelers'), 10),
+(312, 'Chase', 'McLaughlin', 71, 180, 2019, 25, 'Illinois', (SELECT team_id FROM Team WHERE team_name = 'Browns'), 10),
+
+-- AFC South
+(313, 'Rodrigo', 'Blankenship', 72, 198, 2020, 24, 'Georgia', (SELECT team_id FROM Team WHERE team_name = 'Colts'), 10),
+(314, 'Randall', 'Bullock', 69, 205, 2012, 32, 'Texas A&M', (SELECT team_id FROM Team WHERE team_name = 'Titans'), 10),
+(315, 'Josh', 'Lambo', 73, 215, 2015, 31, 'Texas A&M', (SELECT team_id FROM Team WHERE team_name = 'Jaguars'), 10),
+(316, 'Kaimi', 'Fairbairn', 73, 183, 2016, 27, 'UCLA', (SELECT team_id FROM Team WHERE team_name = 'Texans'), 10),
+
+-- AFC West
+(317, 'Harrison', 'Butker', 72, 205, 2017, 26, 'Georgia Tech', (SELECT team_id FROM Team WHERE team_name = 'Chiefs'), 10),
+(318, 'Daniel', 'Carlson', 77, 215, 2018, 27, 'Auburn', (SELECT team_id FROM Team WHERE team_name = 'Chargers'), 10),
+(319, 'Brandon', 'McManus', 74, 201, 2014, 30, 'Temple', (SELECT team_id FROM Team WHERE team_name = 'Broncos'), 10),
+(320, 'Daniel', 'Carlson', 77, 215, 2018, 27, 'Auburn', (SELECT team_id FROM Team WHERE team_name = 'Raiders'), 10);
+
+-- Insert Punters
+INSERT INTO Player (player_id, fname, lname, height, weight, draft_year, age, college, team_id, position_id)
+VALUES
+-- NFC East
+(321, 'Cameron', 'Johnston', 74, 190, 2017, 29, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Eagles'), 11), 
+(322, 'Bryan', 'Anger', 76, 208, 2012, 33, 'California', (SELECT team_id FROM Team WHERE team_name = 'Cowboys'), 11),
+(323, 'Riley', 'Dixon', 74, 221, 2016, 28, 'Syracuse', (SELECT team_id FROM Team WHERE team_name = 'Giants'), 11),
+(324, 'Tress', 'Way', 74, 220, 2014, 31, 'Oklahoma', (SELECT team_id FROM Team WHERE team_name = 'Commanders'), 11),
+
+-- NFC North
+(325, 'Jordan', 'Berry', 74, 185, 2015, 30, 'Eastern Kentucky', (SELECT team_id FROM Team WHERE team_name = 'Vikings'), 11),
+(326, 'Jack', 'Fox', 74, 208, 2020, 24, 'Rice', (SELECT team_id FROM Team WHERE team_name = 'Lions'), 11),
+(327, 'J.K.', 'Scott', 78, 208, 2018, 25, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Packers'), 11),
+(328, 'Pat', 'ODonnell', 76, 217, 2014, 30, 'Miami (FL)', (SELECT team_id FROM Team WHERE team_name = 'Bears'), 11),
+
+-- NFC South
+(329, 'Bradley', 'Pinion', 78, 240, 2015, 27, 'Clemson', (SELECT team_id FROM Team WHERE team_name = 'Buccaneers'), 11),
+(330, 'Thomas', 'Morstead', 76, 235, 2009, 36, 'SMU', (SELECT team_id FROM Team WHERE team_name = 'Saints'), 11),
+(331, 'Dom', 'Maggio', 72, 213, 2021, 24, 'Wake Forest', (SELECT team_id FROM Team WHERE team_name = 'Falcons'), 11),
+(332, 'Joseph', 'Charlton', 76, 257, 2020, 25, 'South Carolina', (SELECT team_id FROM Team WHERE team_name = 'Panthers'), 11),
+
+-- NFC West
+(333, 'Mitch', 'Wishnowsky', 72, 220, 2019, 28, 'Utah', (SELECT team_id FROM Team WHERE team_name = '49ers'), 11),
+(334, 'Michael', 'Dickson', 76, 208, 2018, 25, 'Texas', (SELECT team_id FROM Team WHERE team_name = 'Seahawks'), 11),
+(335, 'Andy', 'Lee', 74, 185, 2004, 39, 'Pittsburgh', (SELECT team_id FROM Team WHERE team_name = 'Cardinals'), 11),
+(336, 'Johnny', 'Hekker', 76, 241, 2012, 31, 'Oregon State', (SELECT team_id FROM Team WHERE team_name = 'Rams'), 11),
+
+-- AFC East
+(337, 'Matt', 'Haack', 76, 218, 2017, 27, 'Arizona State', (SELECT team_id FROM Team WHERE team_name = 'Bills'), 11),
+(338, 'Michael', 'Palardy', 73, 199, 2016, 29, 'Tennessee', (SELECT team_id FROM Team WHERE team_name = 'Dolphins'), 11),
+(339, 'Jake', 'Bailey', 73, 205, 2019, 24, 'Stanford', (SELECT team_id FROM Team WHERE team_name = 'Patriots'), 11),
+(340, 'Thomas', 'Morstead', 76, 235, 2009, 36, 'SMU', (SELECT team_id FROM Team WHERE team_name = 'Jets'), 11),
+
+-- AFC North
+(341, 'Kevin', 'Huber', 74, 214, 2009, 36, 'Cincinnati', (SELECT team_id FROM Team WHERE team_name = 'Bengals'), 11),
+(342, 'Jordan', 'Berry', 74, 185, 2015, 30, 'Eastern Kentucky', (SELECT team_id FROM Team WHERE team_name = 'Ravens'), 11),
+(343, 'Pressley', 'Harvin III', 72, 255, 2021, 23, 'Georgia Tech', (SELECT team_id FROM Team WHERE team_name = 'Steelers'), 11),
+(344, 'Jamie', 'Gillan', 74, 207, 2019, 24, 'Arkansas-Pine Bluff', (SELECT team_id FROM Team WHERE team_name = 'Browns'), 11),
+
+-- AFC South
+(345, 'Rigoberto', 'Sanchez', 73, 195, 2017, 27, 'Hawaii', (SELECT team_id FROM Team WHERE team_name = 'Colts'), 11),
+(346, 'Brett', 'Kern', 74, 214, 2008, 35, 'Toledo', (SELECT team_id FROM Team WHERE team_name = 'Titans'), 11),
+(347, 'Logan', 'Cooke', 74, 230, 2018, 26, 'Mississippi State', (SELECT team_id FROM Team WHERE team_name = 'Jaguars'), 11),
+(348, 'Cameron', 'Johnston', 74, 190, 2017, 29, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Texans'), 11),
+
+-- AFC West
+(349, 'Tom', 'Townsend', 74, 207, 2018, 25, 'Florida', (SELECT team_id FROM Team WHERE team_name = 'Chiefs'), 11),
+(350, 'Ty', 'Long', 73, 212, 2019, 26, 'Alabama-Birmingham', (SELECT team_id FROM Team WHERE team_name = 'Chargers'), 11),
+(351, 'Sam', 'Martin', 73, 211, 2013, 32, 'Appalachian State', (SELECT team_id FROM Team WHERE team_name = 'Broncos'), 11),
+(352, 'A.J.', 'Cole III', 73, 220, 2019, 26, 'North Carolina State', (SELECT team_id FROM Team WHERE team_name = 'Raiders'), 11);
+
+-- Insert Long Snappers
+INSERT INTO Player (player_id, fname, lname, height, weight, draft_year, age, college, team_id, position_id)
+VALUES
+-- NFC East
+(353, 'Rick', 'Lovelato', 73, 248, 2015, 30, 'Old Dominion', (SELECT team_id FROM Team WHERE team_name = 'Eagles'), 12), 
+(354, 'Jake', 'McQuaide', 75, 244, 2011, 33, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Cowboys'), 12),
+(355, 'Casey', 'Kreiter', 76, 250, 2014, 31, 'Iowa', (SELECT team_id FROM Team WHERE team_name = 'Giants'), 12),
+(356, 'Cheyenne', 'OGrady', 76, 240, 2019, 25, 'Arkansas', (SELECT team_id FROM Team WHERE team_name = 'Commanders'), 12),
+
+-- NFC North
+(357, 'Andrew', 'DePaola', 76, 230, 2012, 34, 'Rutgers', (SELECT team_id FROM Team WHERE team_name = 'Vikings'), 12),
+(358, 'Scott', 'Daly', 75, 252, 2019, 26, 'Notre Dame', (SELECT team_id FROM Team WHERE team_name = 'Lions'), 12),
+(359, 'Hunter', 'Bradley', 76, 242, 2018, 25, 'Mississippi State', (SELECT team_id FROM Team WHERE team_name = 'Packers'), 12),
+(360, 'Patrick', 'Scales', 76, 242, 2011, 33, 'Utah State', (SELECT team_id FROM Team WHERE team_name = 'Bears'), 12),
+
+-- NFC South
+(361, 'Zach', 'Wood', 73, 240, 2016, 29, 'Southern Methodist', (SELECT team_id FROM Team WHERE team_name = 'Buccaneers'), 12),
+(362, 'Zach', 'Wood', 73, 240, 2016, 29, 'Southern Methodist', (SELECT team_id FROM Team WHERE team_name = 'Saints'), 12),
+(363, 'Josh', 'Harris', 75, 224, 2012, 34, 'Auburn', (SELECT team_id FROM Team WHERE team_name = 'Falcons'), 12),
+(364, 'J.J.', 'Jansen', 76, 252, 2009, 36, 'Notre Dame', (SELECT team_id FROM Team WHERE team_name = 'Panthers'), 12),
+
+-- NFC West
+(365, 'Kyle', 'Nelson', 74, 240, 2011, 31, 'New Mexico State', (SELECT team_id FROM Team WHERE team_name = '49ers'), 12),
+(366, 'Tyler', 'Ott', 76, 253, 2014, 31, 'Harvard', (SELECT team_id FROM Team WHERE team_name = 'Seahawks'), 12),
+(367, 'Aaron', 'Brewer', 74, 232, 2012, 35, 'San Diego State', (SELECT team_id FROM Team WHERE team_name = 'Cardinals'), 12),
+(368, 'Jake', 'McQuaide', 75, 244, 2011, 33, 'Ohio State', (SELECT team_id FROM Team WHERE team_name = 'Rams'), 12),
+
+-- AFC East
+(369, 'Reid', 'Ferguson', 74, 235, 2016, 25, 'LSU', (SELECT team_id FROM Team WHERE team_name = 'Bills'), 12),
+(370, 'Blake', 'Ferguson', 75, 229, 2019, 25, 'LSU', (SELECT team_id FROM Team WHERE team_name = 'Dolphins'), 12),
+(371, 'Joe', 'Cardona', 75, 240, 2015, 29, 'Navy', (SELECT team_id FROM Team WHERE team_name = 'Patriots'), 12),
+(372, 'Thomas', 'Hennessy', 75, 245, 2017, 25, 'Duke', (SELECT team_id FROM Team WHERE team_name = 'Jets'), 12),
+
+-- AFC North
+(373, 'Clark', 'Harris', 76, 250, 2007, 35, 'Rutgers', (SELECT team_id FROM Team WHERE team_name = 'Bengals'), 12),
+(374, 'Morgan', 'Cox', 76, 241, 2010, 32, 'Tennessee', (SELECT team_id FROM Team WHERE team_name = 'Ravens'), 12),
+(375, 'Kameron', 'Canaday', 76, 245, 2016, 29, 'Portland State', (SELECT team_id FROM Team WHERE team_name = 'Steelers'), 12),
+(376, 'Charley', 'Hughlett', 76, 248, 2012, 33, 'Central Florida', (SELECT team_id FROM Team WHERE team_name = 'Browns'), 12),
+
+-- AFC South
+(377, 'Luke', 'Rhodes', 76, 238, 2016, 29, 'William & Mary', (SELECT team_id FROM Team WHERE team_name = 'Colts'), 12),
+(378, 'Morgan', 'Cox', 76, 241, 2010, 32, 'Tennessee', (SELECT team_id FROM Team WHERE team_name = 'Titans'), 12),
+(379, 'Matt', 'Overton', 76, 243, 2007, 35, 'Western Washington', (SELECT team_id FROM Team WHERE team_name = 'Jaguars'), 12),
+(380, 'Jon', 'Weeks', 76, 248, 2008, 36, 'Baylor', (SELECT team_id FROM Team WHERE team_name = 'Texans'), 12),
+
+-- AFC West
+(381, 'James', 'Winchester', 76, 237, 2015, 31, 'Oklahoma', (SELECT team_id FROM Team WHERE team_name = 'Chiefs'), 12),
+(382, 'Cole', 'Mazza', 75, 237, 2019, 26, 'Alabama', (SELECT team_id FROM Team WHERE team_name = 'Chargers'), 12),
+(383, 'Jacob', 'Bobenmoyer', 75, 245, 2019, 25, 'Northern Colorado', (SELECT team_id FROM Team WHERE team_name = 'Broncos'), 12),
+(384, 'Trent', 'Sieg', 76, 238, 2018, 25, 'Colorado State', (SELECT team_id FROM Team WHERE team_name = 'Raiders'), 12);
 
 
+-- Insert passing data
+CREATE TABLE passing_data (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Player VARCHAR(255),
+    Age INT,
+    G INT,
+    GS INT,
+    Cmp INT,
+    Att INT,
+    CmpPercent FLOAT,
+    Yds INT,
+    TD INT,
+    TDPercent FLOAT,
+    interception INT,
+    interceptionPercentage FLOAT,
+    FirstDowns INT,
+    Lng INT,
+    YPerA FLOAT,
+    AYPerA FLOAT,
+    YPerC FLOAT,
+    YPerG FLOAT,
+    Rating FLOAT,
+    Sk INT,
+    YdsS INT,
+    SkPercent FLOAT,
+    NYPerA FLOAT,
+    ANYPerA FLOAT,
+    Year INT
+);
 
+-- Create offensive player table, need to export
+CREATE TABLE OffensivePlayer AS
+SELECT *
+FROM Player
+WHERE position_id < 8;
 
+-- Create quarterback player table, need to export
+CREATE TABLE Quarterbacks AS
+SELECT *
+FROM Player
+WHERE position_id = 1;
+
+ /*
+LOAD DATA LOCAL INFILE 'Users/Jack/calpoly/csc365/project/NFL_statistics/data/passing_cleaned.csv'
+INTO TABLE passing_data 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS (Player, Age, G, GS, Cmp, Att, CmpPercent, Yds, TD, TDPercent, interception, interceptionPercentage, FirstDowns, Lng, YPerA, AYPerA, YPerC, YPerG, Rating, Sk, YdsS, SkPercent, NYPerA, ANYPerA, Year);
+*/
 
 
 

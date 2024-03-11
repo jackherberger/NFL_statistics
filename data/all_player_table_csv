@@ -1,0 +1,384 @@
+player_id,fname,lname,height,weight,draft_year,age,college,team_id,position_id
+1,Tua,Tagovailoa,73,217,2020,26,Alabama,18,1
+2,Jared,Goff,76,217,2016,29,Cal,6,1
+3,Dak,Prescott,74,238,2016,30,"Miss St",2,1
+4,Josh,Allen,77,237,2018,27,Wyoming,17,1
+5,Brock,Purdy,73,220,2022,24,"Iowa State",13,1
+6,Patrick,Mahomes,74,225,2017,28,"Texas Tech",29,1
+7,Jordan,Love,76,219,2020,25,"Utah State",7,1
+8,C.J.,Stroud,75,218,2023,22,"Ohio State",28,1
+9,Baker,Mayfield,73,215,2018,28,Oklahoma,9,1
+10,Trevor,Lawrence,78,220,2021,24,Clemson,25,1
+11,Matthew,Stafford,75,220,2009,36,Georgia,16,1
+12,Sam,Howell,73,220,2022,23,"North Carolina",4,1
+13,Derek,Carr,75,215,2014,32,"Fresno State",10,1
+14,Jalen,Hurts,73,223,2020,25,Oklahoma,1,1
+15,Lamar,Jackson,74,212,2018,27,Louisville,22,1
+16,Geno,Smith,75,221,2013,33,"West Virginia",14,1
+17,Gardner,Minshew,73,225,2019,27,"Washington St",27,1
+18,Justin,Herbert,78,236,2020,25,Oregon,30,1
+19,Russell,Wilson,71,215,2012,35,Wisconsin,31,1
+20,Bryce,Young,70,194,2023,22,Alabama,12,1
+21,Desmond,Ridder,75,207,2022,24,Cincinnati,11,1
+22,Justin,Fields,75,228,2021,25,"Ohio State",8,1
+23,Joshua,Dobbs,75,216,2017,29,Tennessee,5,1
+24,Joe,Burrow,76,215,2020,27,LSU,21,1
+25,Zach,Wilson,74,214,2021,24,BYU,20,1
+26,Aidan,O'Connell,75,210,2023,25,Purdue,32,1
+27,Mac,Jones,75,220,2021,25,Alabama,19,1
+28,Kenny,Pickett,75,220,2022,25,Pitt,23,1
+29,Will,Levis,76,229,2023,24,Kentucky,26,1
+30,Tyrod,Taylor,73,217,2011,34,VT,3,1
+31,Kyler,Murray,70,207,2019,26,Oklahoma,15,1
+33,Ezekiel,Elliott,72,228,2016,26,"Ohio State",2,2
+34,Saquon,Barkley,72,233,2018,25,"Penn State",3,2
+35,Antonio,Gibson,72,228,2020,24,Memphis,4,2
+36,Miles,Sanders,71,211,2019,24,"Penn State",1,2
+37,Dalvin,Cook,70,210,2017,26,"Florida State",5,2
+38,DAndre,Swift,70,215,2020,23,Georgia,6,2
+39,David,Montgomery,71,222,2019,24,"Iowa State",8,2
+40,Aaron,Jones,69,208,2017,27,UTEP,7,2
+41,Alvin,Kamara,70,215,2017,26,Tennessee,10,2
+42,Christian,McCaffrey,71,205,2017,26,Stanford,12,2
+43,Mike,Davis,70,221,2015,29,"South Carolina",11,2
+44,Leonard,Fournette,73,228,2017,27,LSU,9,2
+45,Raheem,Mostert,69,205,2015,29,Purdue,13,2
+46,Chris,Carson,71,222,2017,28,"Oklahoma State",14,2
+47,James,Conner,73,233,2017,26,Pittsburgh,15,2
+48,Cam,Akers,71,217,2020,23,"Florida State",16,2
+49,Devin,Singletary,68,203,2019,24,"Florida Atlantic",17,2
+50,Myles,Gaskin,69,194,2019,24,Washington,18,2
+51,Damien,Harris,70,213,2019,25,Alabama,19,2
+52,Michael,Carter,68,201,2021,22,"North Carolina",20,2
+53,Joe,Mixson,73,228,2017,26,Oklahoma,21,2
+54,J.K.,Dobbins,70,212,2020,23,"Ohio State",22,2
+55,Najee,Harris,73,230,2021,23,Alabama,23,2
+56,Kareem,Hunt,70,216,2017,26,Toledo,24,2
+57,Jonathan,Taylor,70,226,2020,23,Wisconsin,27,2
+58,Derrick,Henry,75,247,2016,28,Alabama,26,2
+59,James,Robinson,71,220,2020,23,"Illinois State",25,2
+60,Mark,Ingram,69,215,2011,33,Alabama,28,2
+61,Clyde,Edwards-Helaire,68,207,2020,23,LSU,29,2
+62,Austin,Ekeler,69,200,2017,27,"Western Colorado",30,2
+63,Javonte,Williams,71,220,2021,22,"North Carolina",31,2
+64,Josh,Jacobs,70,220,2019,24,Alabama,32,2
+65,DeVonta,Smith,72,166,2021,23,Alabama,1,3
+66,Amari,Cooper,73,210,2015,28,Alabama,2,3
+67,Kenny,Golladay,76,218,2017,29,"Northern Illinois",3,3
+68,Terry,McLaurin,72,210,2019,26,"Ohio State",4,3
+69,Justin,Jefferson,73,202,2020,22,LSU,5,3
+70,Tyrell,Williams,75,204,2015,30,"Western Oregon",6,3
+71,Davante,Adams,73,215,2014,30,"Fresno State",7,3
+72,Darnell,Mooney,71,175,2020,24,Tulane,8,3
+73,Mike,Evans,77,231,2014,29,"Texas A&M",9,3
+74,Michael,Thomas,75,212,2016,29,"Ohio State",10,3
+75,Calvin,Ridley,73,190,2018,27,Alabama,11,3
+76,Robbie,Anderson,75,190,2016,29,Temple,12,3
+77,Deebo,Samuel,71,214,2019,25,"South Carolina",13,3
+78,DK,Metcalf,76,229,2019,24,"Ole Miss",14,3
+79,Christian,Kirk,70,200,2018,26,"Texas A&M",15,3
+80,Cooper,Kupp,74,198,2017,28,"Eastern Washington",16,3
+81,Stefon,Diggs,74,191,2015,28,Maryland,17,3
+82,Jaylen,Waddle,68,182,2021,23,Alabama,18,3
+83,Nelson,Agholor,72,198,2015,29,USC,19,3
+84,Corey,Davis,75,209,2017,27,"Western Michigan",20,3
+85,Ja'Marr,Chase,72,201,2021,22,LSU,21,3
+86,Marquise,Brown,69,180,2019,24,Oklahoma,22,3
+87,Chase,Claypool,76,238,2020,23,"Notre Dame",23,3
+88,Odell,"Beckham Jr.",72,205,2014,29,LSU,24,3
+89,A.J.,Brown,74,226,2019,24,"Ole Miss",27,3
+90,Julio,Jones,75,220,2011,33,Alabama,26,3
+91,D.J.,Chark,75,198,2018,25,LSU,25,3
+92,Chris,Conley,75,213,2015,29,Georgia,28,3
+93,Tyreek,Hill,68,185,2016,28,"West Alabama",29,3
+94,Keenan,Allen,74,211,2013,30,Cal,30,3
+95,Courtland,Sutton,76,216,2018,26,SMU,31,3
+96,Hunter,Renfrow,70,185,2019,26,Clemson,32,3
+97,Zach,Ertz,77,250,2013,31,Stanford,1,4
+98,Blake,Jarwin,76,260,2017,27,"Oklahoma State",2,4
+99,Evan,Engram,76,240,2017,27,Mississippi,3,4
+100,Logan,Thomas,78,248,2014,30,"Virginia Tech",4,4
+101,Kyle,Rudolph,78,265,2011,32,"Notre Dame",5,4
+102,T.J.,Hockenson,77,248,2019,24,Iowa,6,4
+103,Robert,Tonyan,76,237,2017,27,"Indiana State",7,4
+104,Jimmy,Graham,78,268,2010,35,"Miami (FL)",8,4
+105,Rob,Gronkowski,78,268,2010,33,Arizona,9,4
+106,Adam,Trautman,78,253,2020,24,Dayton,10,4
+107,Kyle,Pitts,80,245,2021,21,Florida,11,4
+108,Ian,Thomas,78,260,2018,26,Indiana,12,4
+109,George,Kittle,77,250,2017,28,Iowa,13,4
+110,Will,Dissly,76,265,2018,25,Washington,14,4
+111,Maxx,Williams,78,252,2015,27,Minnesota,15,4
+112,Tyler,Higbee,78,255,2016,29,"Western Kentucky",16,4
+113,Dawson,Knox,78,254,2019,24,"Ole Miss",17,4
+114,Mike,Gesicki,77,250,2018,26,"Penn State",18,4
+115,Hunter,Henry,78,250,2016,27,Arkansas,19,4
+116,Chris,Herndon,76,253,2018,25,"Miami (FL)",20,4
+117,C.J.,Uzomah,78,260,2015,29,Auburn,21,4
+118,Mark,Andrews,78,256,2018,26,Oklahoma,22,4
+119,Eric,Ebron,77,250,2014,29,"North Carolina",23,4
+120,Austin,Hooper,76,255,2016,27,Stanford,24,4
+121,Rob,Gronkowski,78,268,2010,33,Arizona,27,4
+122,Anthony,Firkser,76,244,2017,26,Harvard,26,4
+123,Chris,Manhertz,78,255,2016,29,Canisius,25,4
+124,Jordan,Akins,76,243,2018,29,UCF,28,4
+125,Travis,Kelce,77,260,2013,32,Cincinnati,29,4
+126,Jared,Cook,78,254,2009,35,"South Carolina",30,4
+127,Noah,Fant,76,249,2019,24,Iowa,31,4
+128,Darren,Waller,78,255,2015,29,"Georgia Tech",32,4
+129,Lane,Johnson,79,317,2013,32,Oklahoma,1,5
+130,Zack,Martin,76,315,2014,31,"Notre Dame",2,5
+131,Andrew,Thomas,78,315,2020,22,Georgia,3,5
+132,Brandon,Scherff,77,315,2015,30,Iowa,4,5
+133,Brian,O'Neill,80,297,2018,26,Pittsburgh,5,5
+134,Taylor,Decker,81,312,2016,28,"Ohio State",6,5
+135,David,Bakhtiari,76,310,2013,30,Colorado,7,5
+136,Cody,Whitehair,76,310,2016,30,"Kansas State",8,5
+137,Tristan,Wirfs,80,320,2020,22,Iowa,9,5
+138,Terron,Armstead,81,330,2013,30,"Arkansas-Pine Bluff",10,5
+139,Jake,Matthews,77,309,2014,30,"Texas A&M",11,5
+140,Taylor,Motom,77,318,2019,24,Oklahoma,12,5
+141,Trent,Williams,80,320,2010,33,Oklahoma,13,5
+142,Duane,Brown,76,315,2008,36,"Virginia Tech",14,5
+143,Rodger,Saffold,78,323,2010,33,Indiana,15,5
+144,Andrew,Whitworth,79,330,2006,40,LSU,16,5
+145,Dion,Dawkins,79,321,2017,27,Temple,17,5
+146,Austin,Jackson,80,324,2020,22,USC,18,5
+147,Isaiah,Wynn,77,310,2018,26,Georgia,19,5
+148,Mekhi,Becton,80,363,2020,23,Louisville,20,5
+149,Jonah,Williams,77,305,2019,24,Alabama,21,5
+150,Orlando,"Brown Jr.",82,345,2018,25,Oklahoma,22,5
+151,Kevin,Dotson,76,321,2020,23,Louisiana,23,5
+152,Jack,Conklin,78,308,2016,27,"Michigan State",24,5
+153,Quenton,Nelson,76,330,2018,25,"Notre Dame",27,5
+154,Rodger,Saffold,78,323,2010,33,Indiana,26,5
+155,Cam,Robinson,78,320,2017,26,Alabama,25,5
+156,Laremy,Tunsil,78,313,2016,27,"Ole Miss",28,5
+157,Orlando,Brown,82,345,2018,25,Oklahoma,29,5
+158,Rashawn,Slater,77,315,2021,22,Northwestern,30,5
+159,Garett,Bolles,79,300,2017,30,Utah,31,5
+160,Kolton,Miller,80,325,2018,26,UCLA,32,5
+161,Fletcher,Cox,77,310,2012,31,"Mississippi State",1,6
+162,Demarcus,Lawrence,76,265,2014,29,"Boise State",2,6
+163,Leonard,Williams,77,255,2015,28,USC,3,6
+164,Chase,Young,78,264,2020,22,"Ohio State",4,6
+165,Danielle,Hunter,77,252,2015,27,LSU,5,6
+166,Trey,Flowers,76,265,2015,29,Arkansas,6,6
+167,Kenny,Clark,75,314,2016,26,UCLA,7,6
+168,Akiem,Hicks,76,332,2012,33,Regina,8,6
+169,Vita,Vea,76,347,2018,26,Washington,9,6
+170,Cameron,Jordan,76,287,2011,33,California,10,6
+171,Grady,Jarrett,73,305,2015,29,Clemson,11,6
+172,Derrick,Brown,76,325,2020,23,Auburn,12,6
+173,Nick,Bosa,76,278,2019,24,"Ohio State",13,6
+174,Carlos,Dunlap,78,285,2010,33,Florida,14,6
+175,J.J.,Watt,77,288,2011,33,Wisconsin,15,6
+176,Aaron,Donald,73,280,2014,30,Pittsburgh,16,6
+177,Ed,Oliver,73,287,2019,24,Houston,17,6
+178,Christian,Wilkins,76,309,2019,25,Clemson,18,6
+179,Matthew,Judon,76,275,2016,29,"Grand Valley State",19,6
+180,Quinnen,Williams,76,303,2019,24,Alabama,20,6
+181,Sam,Hubbard,76,265,2018,26,"Ohio State",21,6
+182,Calais,Campbell,79,300,2008,36,"Miami (FL)",22,6
+183,Cameron,Heyward,76,295,2011,33,"Ohio State",23,6
+184,Myles,Garrett,76,272,2017,26,"Texas A&M",24,6
+185,DeForest,Buckner,77,287,2016,26,Oregon,27,6
+186,Jeffery,Simmons,76,305,2019,25,"Mississippi State",26,6
+187,Josh,Allen,76,262,2019,25,Kentucky,25,6
+188,Whitney,Mercilus,76,265,2012,31,Illinois,28,6
+189,Chris,Jones,78,310,2016,27,"Mississippi State",29,6
+190,Joey,Bosa,77,280,2016,26,"Ohio State",30,6
+191,Maxx,Crosby,77,260,2019,24,"Eastern Michigan",31,6
+192,Yannick,Ngakoue,75,245,2016,26,Maryland,32,6
+193,Darius,Leonard,74,230,2018,26,"South Carolina State",1,7
+194,Leighton,"Vander Esch",77,256,2018,25,"Boise State",2,7
+195,Blake,Martinez,74,237,2016,28,Stanford,3,7
+196,Cole,Holcomb,74,234,2019,25,"North Carolina",4,7
+197,Eric,Kendricks,72,232,2015,29,UCLA,5,7
+198,Jamie,"Collins Sr.",75,250,2013,32,"Southern Miss",6,7
+199,DeVondre,Campbell,76,232,2016,29,Minnesota,7,7
+200,Roquan,Smith,73,232,2018,24,Georgia,8,7
+201,Lavonte,David,73,233,2012,31,Nebraska,9,7
+202,Demario,Davis,74,248,2012,32,"Arkansas State",10,7
+203,Deion,Jones,73,227,2016,27,LSU,11,7
+204,Haason,Reddick,73,235,2017,27,Temple,12,7
+205,Fred,Warner,74,236,2018,25,BYU,13,7
+206,Bobby,Wagner,74,243,2012,31,"Utah State",14,7
+207,Isaiah,Simmons,76,238,2020,22,Clemson,15,7
+208,Kenny,Young,74,236,2018,27,UCLA,16,7
+209,Tremaine,Edmunds,76,250,2018,24,"Virginia Tech",17,7
+210,Jerome,Baker,74,215,2018,25,"Ohio State",18,7
+211,Donta,Hightower,75,260,2012,31,Alabama,19,7
+212,C.J.,Mosley,74,238,2014,29,Alabama,20,7
+213,Logan,Wilson,74,230,2020,25,Wyoming,21,7
+214,Patrick,Queen,72,232,2020,22,LSU,22,7
+215,T.J.,Watt,76,252,2017,27,Wisconsin,23,7
+216,Anthony,Walker,74,245,2017,26,Northwestern,24,7
+217,Darius,Leonard,74,230,2018,26,"South Carolina State",27,7
+218,Jayon,Brown,74,226,2017,26,UCLA,26,7
+219,Myles,Jack,75,244,2016,26,UCLA,25,7
+220,Zach,Cunningham,74,230,2017,27,Vanderbilt,28,7
+221,Denzel,Perryman,71,240,2015,29,"Miami (FL)",29,7
+222,Kenneth,Murray,75,241,2020,23,Oklahoma,30,7
+223,Alexander,Johnson,74,240,2018,30,Tennessee,31,7
+224,Nick,Kwiatkoski,74,242,2016,29,"West Virginia",32,7
+225,Darius,Slay,72,190,2013,31,"Mississippi State",1,8
+226,Trevon,Diggs,74,205,2020,23,Alabama,2,8
+227,James,Bradberry,73,212,2016,28,Samford,3,8
+228,Kendall,Fuller,71,198,2016,27,"Virginia Tech",4,8
+229,Patrick,Peterson,73,203,2011,32,LSU,5,8
+230,Jeff,Okudah,73,200,2020,22,"Ohio State",6,8
+231,Jaire,Alexander,71,196,2018,25,Louisville,7,8
+232,Jaylon,Johnson,72,195,2020,23,Utah,8,8
+233,Carlton,Davis,74,206,2018,25,Auburn,9,8
+234,Marshon,Lattimore,72,192,2017,26,"Ohio State",10,8
+235,A.J.,Terrell,74,195,2020,22,Clemson,11,8
+236,Donte,Jackson,71,180,2018,25,LSU,12,8
+237,Jalen,Ramsey,73,208,2016,27,"Florida State",13,8
+238,Quandre,Diggs,71,198,2015,29,Texas,14,8
+239,Byron,Murphy,71,185,2019,24,Washington,15,8
+240,Jalen,Ramsey,73,208,2016,27,"Florida State",16,8
+241,Tre,"Davious White",71,198,2017,27,LSU,17,8
+242,Xavien,Howard,72,198,2016,28,Baylor,18,8
+243,J.C.,Jackson,71,198,2018,26,Maryland,19,8
+244,Bryce,Hall,74,202,2020,23,Virginia,20,8
+245,Marlon,Humphrey,72,197,2017,25,Alabama,21,8
+246,Marcus,Peters,72,197,2015,29,Washington,22,8
+247,Joe,Haden,71,195,2010,33,Florida,23,8
+248,Greg,"Newsome II",73,192,2021,21,Northwestern,24,8
+249,Kenny,"Moore II",69,190,2017,26,"Valdosta State",27,8
+250,Caleb,Farley,74,197,2021,21,"Virginia Tech",26,8
+251,A.J.,Bouye,72,191,2013,30,"Central Florida",25,8
+252,Terrance,Mitchell,71,191,2014,29,Oregon,28,8
+253,Chris,"Harris Jr.",69,199,2011,32,Kansas,29,8
+254,Casey,Hayward,71,192,2012,32,Vanderbilt,30,8
+255,Bryce,Callahan,68,188,2015,30,Rice,31,8
+256,Damon,Arnette,72,195,2020,25,"Ohio State",32,8
+257,DAndre,Dinwiddie,72,202,2019,24,Tuskegee,1,9
+258,Donovan,Wilson,73,206,2019,24,"Texas A&M",2,9
+259,Logan,Ryan,71,195,2013,31,Rutgers,3,9
+260,Landon,Collins,72,218,2015,28,Alabama,4,9
+261,Harrison,Smith,74,214,2012,33,"Notre Dame",5,9
+262,Tracy,Walker,73,206,2018,27,Louisiana,6,9
+263,Adrian,Amos,72,214,2015,29,"Penn State",7,9
+264,Eddie,Jackson,72,204,2017,27,Alabama,8,9
+265,Antoine,"Winfield Jr.",70,203,2020,23,Minnesota,9,9
+266,Malcolm,Jenkins,72,204,2009,34,"Ohio State",10,9
+267,Jaycee,Horn,73,205,2021,22,"South Carolina",11,9
+268,Jeremy,Chinn,76,212,2020,23,"Southern Illinois",12,9
+269,Tyrann,Mathieu,69,180,2013,30,LSU,13,9
+270,Quandre,Diggs,71,198,2015,29,Texas,14,9
+271,Budda,Baker,70,195,2017,26,Washington,15,9
+272,Jordan,Fuller,72,203,2020,24,"Ohio State",16,9
+273,Micah,Hyde,72,196,2013,31,Iowa,17,9
+274,Justin,Coleman,71,190,2015,29,Tennessee,18,9
+275,Devin,McCourty,71,205,2010,34,Rutgers,19,9
+276,Marcus,Maye,72,207,2017,28,Florida,20,9
+277,Jessie,"Bates III",73,200,2018,25,"Wake Forest",21,9
+278,Chuck,Clark,72,205,2017,26,"Virginia Tech",22,9
+279,Minkah,Fitzpatrick,72,207,2018,25,Alabama,23,9
+280,John,"Johnson III",72,205,2017,26,"Boston College",24,9
+281,Kenny,"Moore II",69,190,2017,26,"Valdosta State",27,9
+282,Kevin,Byard,71,216,2016,28,"Middle Tennessee",26,9
+283,Jarrod,Wilson,74,200,2016,28,Michigan,25,9
+284,Lonnie,"Johnson Jr.",74,213,2019,24,Kentucky,28,9
+285,Tyrann,Mathieu,69,180,2013,30,LSU,29,9
+286,Derwin,James,74,212,2018,25,"Florida State",30,9
+287,Justin,Simmons,74,201,2016,27,"Boston College",31,9
+288,Johnathan,Abram,72,205,2019,25,"Mississippi State",32,9
+289,Jake,Elliott,70,167,2017,26,Memphis,1,10
+290,Greg,Zuerlein,72,194,2012,34,"Missouri Western",2,10
+291,Graham,Gano,72,202,2009,35,"Florida State",3,10
+292,Chris,Boswell,72,185,2014,30,Rice,4,10
+293,Greg,Joseph,74,210,2018,27,"Florida Atlantic",5,10
+294,Riley,Patterson,73,185,2021,22,Memphis,6,10
+295,Mason,Crosby,73,207,2007,37,Colorado,7,10
+296,Eddy,Pineiro,72,182,2018,26,Florida,8,10
+297,Ryan,Succop,74,218,2009,35,"South Carolina",9,10
+298,Wil,Lutz,72,184,2016,27,"Georgia State",10,10
+299,Younghoe,Koo,68,185,2017,27,"Georgia Southern",11,10
+300,Joey,Slye,73,213,2019,25,"Virginia Tech",12,10
+301,Robbie,Gould,72,219,2005,39,"Penn State",13,10
+302,Jason,Myers,73,190,2012,31,Marist,14,10
+303,Matt,Prater,75,205,2006,37,UCF,15,10
+304,Matt,Gay,73,232,2019,24,Utah,16,10
+305,Tyler,Bass,70,183,2020,24,"Georgia Southern",17,10
+306,Jason,Sanders,71,185,2018,26,"New Mexico",18,10
+307,Nick,Folk,73,211,2007,37,Arizona,19,10
+308,Eddy,Pineiro,72,182,2018,26,Florida,20,10
+309,Evan,McPherson,73,185,2021,22,Florida,21,10
+310,Justin,Tucker,72,183,2012,32,Texas,22,10
+311,Chris,Boswell,72,185,2014,30,Rice,23,10
+312,Chase,McLaughlin,71,180,2019,25,Illinois,24,10
+313,Rodrigo,Blankenship,72,198,2020,24,Georgia,27,10
+314,Randall,Bullock,69,205,2012,32,"Texas A&M",26,10
+315,Josh,Lambo,73,215,2015,31,"Texas A&M",25,10
+316,Kaimi,Fairbairn,73,183,2016,27,UCLA,28,10
+317,Harrison,Butker,72,205,2017,26,"Georgia Tech",29,10
+318,Daniel,Carlson,77,215,2018,27,Auburn,30,10
+319,Brandon,McManus,74,201,2014,30,Temple,31,10
+320,Daniel,Carlson,77,215,2018,27,Auburn,32,10
+321,Cameron,Johnston,74,190,2017,29,"Ohio State",1,11
+322,Bryan,Anger,76,208,2012,33,California,2,11
+323,Riley,Dixon,74,221,2016,28,Syracuse,3,11
+324,Tress,Way,74,220,2014,31,Oklahoma,4,11
+325,Jordan,Berry,74,185,2015,30,"Eastern Kentucky",5,11
+326,Jack,Fox,74,208,2020,24,Rice,6,11
+327,J.K.,Scott,78,208,2018,25,Alabama,7,11
+328,Pat,ODonnell,76,217,2014,30,"Miami (FL)",8,11
+329,Bradley,Pinion,78,240,2015,27,Clemson,9,11
+330,Thomas,Morstead,76,235,2009,36,SMU,10,11
+331,Dom,Maggio,72,213,2021,24,"Wake Forest",11,11
+332,Joseph,Charlton,76,257,2020,25,"South Carolina",12,11
+333,Mitch,Wishnowsky,72,220,2019,28,Utah,13,11
+334,Michael,Dickson,76,208,2018,25,Texas,14,11
+335,Andy,Lee,74,185,2004,39,Pittsburgh,15,11
+336,Johnny,Hekker,76,241,2012,31,"Oregon State",16,11
+337,Matt,Haack,76,218,2017,27,"Arizona State",17,11
+338,Michael,Palardy,73,199,2016,29,Tennessee,18,11
+339,Jake,Bailey,73,205,2019,24,Stanford,19,11
+340,Thomas,Morstead,76,235,2009,36,SMU,20,11
+341,Kevin,Huber,74,214,2009,36,Cincinnati,21,11
+342,Jordan,Berry,74,185,2015,30,"Eastern Kentucky",22,11
+343,Pressley,"Harvin III",72,255,2021,23,"Georgia Tech",23,11
+344,Jamie,Gillan,74,207,2019,24,"Arkansas-Pine Bluff",24,11
+345,Rigoberto,Sanchez,73,195,2017,27,Hawaii,27,11
+346,Brett,Kern,74,214,2008,35,Toledo,26,11
+347,Logan,Cooke,74,230,2018,26,"Mississippi State",25,11
+348,Cameron,Johnston,74,190,2017,29,"Ohio State",28,11
+349,Tom,Townsend,74,207,2018,25,Florida,29,11
+350,Ty,Long,73,212,2019,26,Alabama-Birmingham,30,11
+351,Sam,Martin,73,211,2013,32,"Appalachian State",31,11
+352,A.J.,"Cole III",73,220,2019,26,"North Carolina State",32,11
+353,Rick,Lovelato,73,248,2015,30,"Old Dominion",1,12
+354,Jake,McQuaide,75,244,2011,33,"Ohio State",2,12
+355,Casey,Kreiter,76,250,2014,31,Iowa,3,12
+356,Cheyenne,OGrady,76,240,2019,25,Arkansas,4,12
+357,Andrew,DePaola,76,230,2012,34,Rutgers,5,12
+358,Scott,Daly,75,252,2019,26,"Notre Dame",6,12
+359,Hunter,Bradley,76,242,2018,25,"Mississippi State",7,12
+360,Patrick,Scales,76,242,2011,33,"Utah State",8,12
+361,Zach,Wood,73,240,2016,29,"Southern Methodist",9,12
+362,Zach,Wood,73,240,2016,29,"Southern Methodist",10,12
+363,Josh,Harris,75,224,2012,34,Auburn,11,12
+364,J.J.,Jansen,76,252,2009,36,"Notre Dame",12,12
+365,Kyle,Nelson,74,240,2011,31,"New Mexico State",13,12
+366,Tyler,Ott,76,253,2014,31,Harvard,14,12
+367,Aaron,Brewer,74,232,2012,35,"San Diego State",15,12
+368,Jake,McQuaide,75,244,2011,33,"Ohio State",16,12
+369,Reid,Ferguson,74,235,2016,25,LSU,17,12
+370,Blake,Ferguson,75,229,2019,25,LSU,18,12
+371,Joe,Cardona,75,240,2015,29,Navy,19,12
+372,Thomas,Hennessy,75,245,2017,25,Duke,20,12
+373,Clark,Harris,76,250,2007,35,Rutgers,21,12
+374,Morgan,Cox,76,241,2010,32,Tennessee,22,12
+375,Kameron,Canaday,76,245,2016,29,"Portland State",23,12
+376,Charley,Hughlett,76,248,2012,33,"Central Florida",24,12
+377,Luke,Rhodes,76,238,2016,29,"William & Mary",27,12
+378,Morgan,Cox,76,241,2010,32,Tennessee,26,12
+379,Matt,Overton,76,243,2007,35,"Western Washington",25,12
+380,Jon,Weeks,76,248,2008,36,Baylor,28,12
+381,James,Winchester,76,237,2015,31,Oklahoma,29,12
+382,Cole,Mazza,75,237,2019,26,Alabama,30,12
+383,Jacob,Bobenmoyer,75,245,2019,25,"Northern Colorado",31,12
+384,Trent,Sieg,76,238,2018,25,"Colorado State",32,12
