@@ -42,6 +42,7 @@ app.get("/findPlayers", (req, res) => {
       INNER JOIN Team ON Player.team_id = Team.team_id
       INNER JOIN Player_Position ON Player.position_id = Player_Position.position_id
       INNER JOIN Division ON Team.division_id = Division.division_id
+      
       WHERE 1=1
     `;
   
@@ -70,6 +71,20 @@ app.get("/findPlayers", (req, res) => {
       return res.json(data);
     });
   });
+
+app.get("/findPlayerStats", (req, res) => {
+    let { player_id } = req.query;
+
+    let q = `
+      SELECT * FROM Player_Stats
+      WHERE player_id = ?
+    `;
+
+    db.query(q, [player_id], (err, data) => {
+      if (err) return res.json(err);
+      return res.json(data);
+    })
+})
   
 
 app.listen(8800, ()=> {
