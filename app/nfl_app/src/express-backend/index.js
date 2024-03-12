@@ -37,12 +37,14 @@ app.get("/findPlayers", (req, res) => {
     let { division, team, position_type, position_name, lname } = req.query;
   
     let q = `
-      SELECT Player.*, Team.team_name, Player_Position.position_name, Division.division_name
+      SELECT Player.*, Player_Stats.*, Team.team_name, Player_Position.position_name, Division.division_name,
+      CASE WHEN Player_Stats.player_id IS NOT NULL THEN TRUE ELSE FALSE END AS has_stats
       FROM Player
       INNER JOIN Team ON Player.team_id = Team.team_id
       INNER JOIN Player_Position ON Player.position_id = Player_Position.position_id
       INNER JOIN Division ON Team.division_id = Division.division_id
-      
+      LEFT JOIN Player_Stats ON Player.player_id = Player_Stats.player_id
+
       WHERE 1=1
     `;
   
@@ -72,19 +74,6 @@ app.get("/findPlayers", (req, res) => {
     });
   });
 
-app.get("/findPlayerStats", (req, res) => {
-    let { player_id } = req.query;
-
-    let q = `
-      SELECT * FROM Player_Stats
-      WHERE player_id = ?
-    `;
-
-    db.query(q, [player_id], (err, data) => {
-      if (err) return res.json(err);
-      return res.json(data);
-    })
-})
   
 
 app.listen(8800, ()=> {

@@ -12,7 +12,9 @@ const FindPlayers = () => {
   });
 
   const [players, setPlayers] = useState([]);
-  const [playerStats, setPlayerStats] = useState({});
+  const [showStats, setShowStats] = useState({});
+  const [showOnlyWithStats, setShowOnlyWithStats] = useState(false);
+
 
   const handleChange = (e) => {
     setFields((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -25,6 +27,7 @@ const FindPlayers = () => {
         params: fields,
       });
       setPlayers(response.data); // Update the state with the response data
+      setShowStats({}); // Reset showStats state
       setFields({
         division: "",
         team: "",
@@ -37,22 +40,16 @@ const FindPlayers = () => {
     }
   };
 
-const fetchPlayerStats = async (playerId) => {
-  if (playerStats[playerId]) {
-    // If stats are already loaded, toggle their visibility
-    setPlayerStats(prevStats => ({ ...prevStats, [playerId]: null }));
-  } else {
-    // Fetch and display stats
-    try {
-      const response = await axios.get('http://localhost:8800/findPlayerStats', {
-        params: { player_id: playerId }
-      });
-      setPlayerStats(prevStats => ({ ...prevStats, [playerId]: response.data }));
-    } catch (err) {
-      console.log(err);
-    }
-  }
-};
+  const handleCheckboxChange = () => {
+    setShowOnlyWithStats(!showOnlyWithStats);
+  };
+
+  const toggleStats = (playerId) => {
+    setShowStats((prevStats) => ({
+      ...prevStats,
+      [playerId]: !prevStats[playerId],
+    }));
+  };
 
   return (
     <div className="find_players_form">
@@ -94,6 +91,14 @@ const fetchPlayerStats = async (playerId) => {
           value={fields.lname}
         />
         <button type="submit"> Search </button>
+        <div>
+          <input
+            type="checkbox"
+            checked={showOnlyWithStats}
+            onChange={handleCheckboxChange}
+          />
+          <label>Show only players with stats</label>
+        </div>
       </form>
 
       <div>
@@ -105,41 +110,109 @@ const fetchPlayerStats = async (playerId) => {
                 <th>Team</th>
                 <th>Division</th>
                 <th>Position</th>
-                <th>Actions</th>
+                <th>Stats</th>
               </tr>
             </thead>
             <tbody>
-              {players.map((player, index) => (
+              {players
+              .filter(player => !showOnlyWithStats || player.has_stats)
+              .map((player, index) => (
                 <React.Fragment key={index}>
                   <tr>
+                    {/* Player details here */}
                     <td>{`${player.fname} ${player.lname}`}</td>
                     <td>{player.team_name}</td>
                     <td>{player.division_name}</td>
                     <td>{player.position_name}</td>
                     <td>
-                      <button onClick={() => fetchPlayerStats(player.player_id)}>
-                        {playerStats[player.player_id] ? "Hide Stats" : "Show Stats"}
-                      </button>
+                      {player.has_stats ? (
+                        <button onClick={() => toggleStats(player.player_id)}>
+                          {showStats[player.player_id] ? "Hide" : "Show"}
+                        </button>
+                      ) : (
+                        <span>Unavailable</span>
+                      )}
                     </td>
                   </tr>
-                  {playerStats[player.player_id] && (
-                    <tr>
-                      <td colSpan="5">
-                        {/* Add columns for each stat */}
-                        <td>Rushing Yards</td>
-                        <td>Passing Yards</td>
-                        <td>Recieving Yards</td>
-                        <td>Loss</td>
-                        {/* Display player stats here */}
-                        <tr>
-                          <td>{playerStats[player.player_id].rush_yds}</td>
-                          <td>{playerStats[player.player_id].pass_yds}</td>
-                          <td>{playerStats[player.player_id].rec_yds}</td>
-                          <td>{playerStats[player.player_id].loss}</td>
-                        </tr>
-                      </td>
-                    </tr>
-                  )}
+                  {showStats[player.player_id] && (
+                  <tr>
+                    <td colSpan="5">
+                      {/* Conditional rendering based on player's position abbreviation */}
+                      {player.position_name === "QB" && (
+                        <>
+                          <td>Passing Yards</td>
+                          <td>Passing Touchdowns</td>
+                          <td>Interceptions</td>
+                          <td>Pass Attempts</td>
+                          <td>Pass Completions</td>
+                          <tr>
+                            <td>{player.Pass_Yds}</td>
+                            <td>{player.Pass_TD}</td>
+                            <td>{player.Pass_Int}</td>
+                            <td>{player.Pass_Att}</td>
+                            <td>{player.Pass_Cmp}</td>
+                          </tr>
+                        </>
+                      )}
+                      {player.position_name === "RB" && (
+                        <>
+                          <td>Rushing Yards</td>
+                          <td>Rushing Attempts</td>
+                          <td>Rushing Touchdowns</td>
+                          <td>Receptions</td>
+                          <td>Receiving Yards</td>
+                          <tr>
+                            <td>{player.Rush_Yds}</td>
+                            <td>{player.Rush_Att}</td>
+                            <td>{player.Rush_TD}</td>
+                            <td>{player.Rec}</td>
+                            <td>{player.Rec_Yds}</td>
+                          </tr>
+                        </>
+                      )}
+                      {player.position_name === "WR" && (
+                        <>
+                          <td>Receiving Yards</td>
+                          <td>Receptions</td>
+                          <td>Receiving Touchdowns</td>
+                          <td>Targets</td>
+                          <td>Yards After Catch</td>
+                          <tr>
+                            <td>{player.Rec_Yds}</td>
+                            <td>{player.Rec}</td>
+                            <td>{player.Rec_TD}</td>
+                            <td>{player.Rec_Tar}</td>
+                            <td>{player.Rec_YAC}</td>
+                          </tr>
+                        </>
+                      )}
+                      {player.position_name === "TE" && (
+                        <>
+                          <td>Receiving Yards</td>
+                          <td>Receptions</td>
+                          <td>Receiving Touchdowns</td>
+                          <td>Targets</td>
+                          <td>Lost Yards</td>
+                          <tr>
+                            <td>{player.Rec_Yds}</td>
+                            <td>{player.Rec}</td>
+                            <td>{player.Rec_TD}</td>
+                            <td>{player.Rec_Tar}</td>
+                            <td>{player.Loss}</td>
+                          </tr>
+                        </>
+                      )}
+                      {/* Default case for positions not specified */}
+                      {!(["QB", "RB", "WR", "TE"].includes(player.position_name)) && (
+                        <>
+                          <tr>
+                            <td colSpan="5">No Stats Available</td>
+                          </tr>
+                        </>
+                      )}
+                    </td>
+                  </tr>
+                )}
                 </React.Fragment>
               ))}
             </tbody>
