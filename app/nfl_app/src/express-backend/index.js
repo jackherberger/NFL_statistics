@@ -64,8 +64,6 @@ app.get("/findPlayers", (req, res) => {
     if (division) {
         q += ` AND Division.division_name LIKE '%${division}%'`;
     }
-
-
   
     db.query(q, (err, data) => {
       if (err) return res.json(err);
