@@ -34,7 +34,7 @@ app.get("/teams", (req, res) => {
 
 //select from DB with fields specified in find_player_form
 app.get("/findPlayers", (req, res) => {
-    let { team, position_type, position_name, lname } = req.query;
+    let { division, team, position_type, position_name, lname } = req.query;
   
     let q = `
       SELECT * FROM Player
@@ -58,6 +58,11 @@ app.get("/findPlayers", (req, res) => {
     if (lname) {
         q += ` AND Player.lname LIKE '%${lname}%'`;
       }
+
+    if (division) {
+        q += ` AND Team.division_id IN (SELECT Division.division_id FROM Division WHERE Division.division_name LIKE '%${division}%')`;
+    }
+
 
   
     db.query(q, (err, data) => {

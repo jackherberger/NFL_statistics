@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import axios from 'axios';
+import './findPlayers.css';
 
 const FindPlayers = () => {
   const [fields, setFields] = useState({
+    division: "",
     team: "",
     position_type: "",
     position_name: "",
+    lname: "",
   });
 
   const [players, setPlayers] = useState([]);
@@ -14,18 +17,14 @@ const FindPlayers = () => {
     setFields((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleClick = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.get('http://localhost:8800/findPlayers', {
-        params: {
-          team: fields.team,
-          position_type: fields.position_type,
-          position_name: fields.position_name,
-          lname: fields.lname
-        }
+        params: fields
       });
       setPlayers(response.data);  // Update the state with the response data
+      setFields({ division: "", team: "", position_type: "", position_name: "", lname: "" }); // Clear the fields
     } catch (err) {
       console.log(err);
     }
@@ -34,11 +33,14 @@ const FindPlayers = () => {
   return (
     <div className="find_players_form">
       <h1>Find Players</h1>
-      <input type="text" placeholder="Team" onChange={handleChange} name="team" />
-      <input type="text" placeholder="Position Type" onChange={handleChange} name="position_type" />
-      <input type="text" placeholder="Position" onChange={handleChange} name="position_name" />
-      <input type="text" placeholder="Last Name" onChange={handleChange} name="lname" />
-      <button onClick={handleClick}> Search </button>
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Division" onChange={handleChange} name="division" value={fields.division} />
+        <input type="text" placeholder="Team" onChange={handleChange} name="team" value={fields.team} />
+        <input type="text" placeholder="Position Type" onChange={handleChange} name="position_type" value={fields.position_type} />
+        <input type="text" placeholder="Position" onChange={handleChange} name="position_name" value={fields.position_name} />
+        <input type="text" placeholder="Last Name" onChange={handleChange} name="lname" value={fields.lname} />
+        <button type="submit"> Search </button>
+      </form>
 
       <div>
         {players.length > 0 && (

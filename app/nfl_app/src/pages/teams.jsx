@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from 'axios'
+import './teams.css';
+
 
 const Teams = () => {
   const [teams, setTeams] = useState([])
