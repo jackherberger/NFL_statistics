@@ -49,6 +49,7 @@ const FindPlayers = () => {
               <tr>
                 <th>Player Name</th>
                 <th>Team</th>
+                <th>Division</th>
                 <th>Position</th>
                 {/* Add other relevant headers here */}
               </tr>
@@ -58,6 +59,7 @@ const FindPlayers = () => {
                 <tr key={index}>
                   <td>{`${player.fname} ${player.lname}`}</td>
                   <td>{player.team_name}</td>
+                  <td>{player.division_name}</td>
                   <td>{player.position_name}</td>
                   {/* Add other player data here */}
                 </tr>

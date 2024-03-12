@@ -37,9 +37,11 @@ app.get("/findPlayers", (req, res) => {
     let { division, team, position_type, position_name, lname } = req.query;
   
     let q = `
-      SELECT * FROM Player
+      SELECT Player.*, Team.team_name, Player_Position.position_name, Division.division_name
+      FROM Player
       INNER JOIN Team ON Player.team_id = Team.team_id
       INNER JOIN Player_Position ON Player.position_id = Player_Position.position_id
+      INNER JOIN Division ON Team.division_id = Division.division_id
       WHERE 1=1
     `;
   
@@ -60,7 +62,7 @@ app.get("/findPlayers", (req, res) => {
       }
 
     if (division) {
-        q += ` AND Team.division_id IN (SELECT Division.division_id FROM Division WHERE Division.division_name LIKE '%${division}%')`;
+        q += ` AND Division.division_name LIKE '%${division}%'`;
     }
 
 
