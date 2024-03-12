@@ -32,25 +32,25 @@ def get_table_row(url, position):
       "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"
    }
    response = requests.get(url, headers=headers)
-   time.sleep(.2) # Be kind to the server
+   time.sleep(.2) # Be kind to the server (also lets not get banned...)
 
-   if response.status_code != 200 or response.history:
+   if response.status_code != 200 or response.history: #If response.history is not empty, then the request was redirected!
       print(f"Failed to access {url}")
    
    soup = BeautifulSoup(response.text, 'html.parser')
-   tables_names = soup.find_all('span', class_="hidden-xs hidden-sm")
+   tables_names = soup.find_all('span', class_="hidden-xs hidden-sm") # This is the class of the table names
 
+   # lets make default dataframs with NaN's in case the player does not have the stats we are looking for
+   mt_pass = passing_df = pd.DataFrame([[0]*21], columns=['Year', 'Team', 'League', 'G', 'GS', 'Pass_Att', 'Pass_Cmp', 'Pass_Pct', 'Pass_Yds', 'Pass_YPA', 'Pass_YPG', 'Pass_TD', 'Pass_T%', 'Pass_Int', 'Pass_I%', 'Pass_Lg', 'Pass_FD', 'Pass_20+', 'Sack', 'Loss', 'Rate'])
+   mt_rush = rushing_df = pd.DataFrame([[0]*13], columns=['Year', 'Team', 'League', 'G', 'GS', 'Rush_Att', 'Rush_Yds', 'Rush_Avg', 'Rush_YPG', 'Rush_Lg', 'Rush_TD', 'Rush_FD', 'Rec_10+'])
+   mt_rec = recieving_df = pd.DataFrame([[0]*15], columns=['Year', 'Team', 'League', 'G', 'GS', 'Rec', 'Rec_Yds', 'Rec_Avg', 'Rec_YPG', 'Rec_Lg', 'Rec_TD', 'Rec_FD', 'Rec_20+', 'Rec_Tar', 'Rec_YAC'])
 
-   mt_pass = passing_df = pd.DataFrame([[np.nan]*21], columns=['Year', 'Team', 'League', 'G', 'GS', 'Pass_Att', 'Pass_Cmp', 'Pass_Pct', 'Pass_Yds', 'Pass_YPA', 'Pass_YPG', 'Pass_TD', 'Pass_T%', 'Pass_Int', 'Pass_I%', 'Pass_Lg', 'Pass_FD', 'Pass_20+', 'Sack', 'Loss', 'Rate'])
-   mt_rush = rushing_df = pd.DataFrame([[np.nan]*13], columns=['Year', 'Team', 'League', 'G', 'GS', 'Rush_Att', 'Rush_Yds', 'Rush_Avg', 'Rush_YPG', 'Rush_Lg', 'Rush_TD', 'Rush_FD', 'Rec_10+'])
-   mt_rec = recieving_df = pd.DataFrame([[np.nan]*15], columns=['Year', 'Team', 'League', 'G', 'GS', 'Rec', 'Rec_Yds', 'Rec_Avg', 'Rec_YPG', 'Rec_Lg', 'Rec_TD', 'Rec_FD', 'Rec_20+', 'Rec_Tar', 'Rec_YAC'])
-
-   table_rows = soup.find_all('tr', class_='header right row_playerstats row_pro')
+   table_rows = soup.find_all('tr', class_='header right row_playerstats row_pro') # This is the class of the table rows
 
    for i in range(len(tables_names)):
       # print(tables_names[i].text)
       if tables_names[i].text == "Passing" or tables_names[i].text == "Pass":
-         passing_row = table_rows[i * 3] if len(table_rows) > (i * 3) else None
+         passing_row = table_rows[i * 3] if len(table_rows) > (i * 3) else None 
          if passing_row:
             passing_data = [td.text for td in passing_row.find_all('td')]
             passing_df = pd.DataFrame([passing_data], columns=['Year', 'Team', 'League', 'G', 'GS', 'Pass_Att', 'Pass_Cmp', 'Pass_Pct', 'Pass_Yds', 'Pass_YPA', 'Pass_YPG', 'Pass_TD', 'Pass_T%', 'Pass_Int', 'Pass_I%', 'Pass_Lg', 'Pass_FD', 'Pass_20+', 'Sack', 'Loss', 'Rate'])
@@ -124,7 +124,8 @@ def main():
       "https://www.footballdb.com/players/jones-mac-jonesma01" : "",
       "https://www.footballdb.com/players/taylor-tyrod-tayloty01" : "https://www.footballdb.com/players/tyrod-taylor-tayloty02",
       "https://www.footballdb.com/players/gibson-antonio-gibsoan01" : "https://www.footballdb.com/players/antonio-gibson-gibsoan02",
-      "https://www.footballdb.com/players/harris-damien-harrida01": "https://www.footballdb.com/players/damien-harris-harrida11"
+      "https://www.footballdb.com/players/hunter-danielle-hunteda01": "https://www.footballdb.com/players/danielle-hunter-hunteda05",
+      "https://www.footballdb.com/players/harris-damien-harrida01" : "https://www.footballdb.com/players/damien-harris-harrida11"
    }
 
 
@@ -139,14 +140,14 @@ def main():
 
    for i in range(len(urls)):
       if urls[i] != "":
-         if urls[i] == "https://www.footballdb.com/players/hunter-danielle-hunteda01":
-            break
+         # if urls[i] == "https://www.footballdb.com/players/hunter-danielle-hunteda01":
+         #    break
          print(urls[i])
          table_row = get_table_row(urls[i], positions[i])
          all_data = all_data.append(table_row, ignore_index=True)
 
    print(all_data)
-   all_data.to_csv('player_stats.csv', index=False)
+   all_data.to_csv('offensive_stats.csv', index=False)
 
 if __name__ == "__main__":
    main()
