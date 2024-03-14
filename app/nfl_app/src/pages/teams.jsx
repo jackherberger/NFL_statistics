@@ -29,17 +29,19 @@ const Teams = () => {
             <th>Team Name</th>
             <th>City</th>
             <th>State</th>
+            <th>Coach</th>
             <th>Wins</th>
             <th>Losses</th>
             <th>Ties</th>
           </tr>
         </thead>
         <tbody>
-          {teams.sort((a, b) => b.wins - a.wins).map(team => (
+          {Array.isArray(teams) && teams.sort((a, b) => b.wins - a.wins).map(team => (
             <tr key={team.team_id}>
               <td>{team.team_name}</td>
               <td>{team.city}</td>
               <td>{team.state}</td>
+              <td>{`${team.coach_fname} ${team.coach_lname}`}</td>
               <td>{team.wins}</td>
               <td>{team.losses}</td>
               <td>{team.ties}</td>
