@@ -9,12 +9,27 @@
     color: #333;
 }
 
-.find_players_form input[type="text"] {
+.find_players_form input[type="text"], 
+.find_players_form input[type="checkbox"] {
     margin: 10px;
     padding: 8px;
+}
+
+.find_players_form input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+}
+
+.find_players_form input[type="checkbox"] {
+    margin-left: 0;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.find_players_form label {
+    font-size: 16px;
+    vertical-align: middle;
 }
 
 .find_players_form button {
