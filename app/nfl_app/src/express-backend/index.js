@@ -25,7 +25,11 @@ app.get("/", (req, res) => {
 
 //get all teams (no dynamic query fields)
 app.get("/teams", (req, res) => {
-    const q = "SELECT * FROM team"
+    const q = `
+      SELECT Team.*, Coach.*
+      FROM Team
+      INNER JOIN Coach ON Team.team_id = Coach.team_id`
+
     db.query(q, (err, data) => {
         if(err) return res.json(err)
         return res.json(data)
