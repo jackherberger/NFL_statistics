@@ -1353,3 +1353,64 @@ SET stats.player_id = p.player_id;
 ALTER TABLE player_stats
 ADD FOREIGN KEY (player_id) REFERENCES Player(player_id);
 
+
+
+-- TESTING:
+
+-- 1: Check total number of teams in each division:
+SELECT Division.division_name, COUNT(Team.team_id) AS NumberOfTeams
+FROM Division
+JOIN Team ON Division.division_id = Team.division_id
+GROUP BY Division.division_name;
+
+-- 2: List all players from a team:
+SELECT Player.fname, Player.lname
+FROM Player
+JOIN Team ON Player.team_id = Team.team_id
+WHERE Team.team_name = 'Eagles';
+
+-- 3: Show games where the home team scored more than 30 points:
+SELECT game_id, home_team_id, away_team_id, home_team_score, away_team_score
+FROM Game
+WHERE home_team_score > 30;
+
+-- 4: Find average age of players in a certain position:
+SELECT AVG(age) AS AverageAge
+FROM Player
+JOIN Player_Position ON Player.position_id = Player_Position.position_id
+WHERE Player_Position.position_name = 'QB';
+
+-- 5: Retrieve the full names and teams of all coaches:
+SELECT coach_fname, coach_lname, Team.team_name
+FROM Coach
+JOIN Team ON Coach.team_id = Team.team_id;
+
+-- 6: List teams with more than 10 wins:
+SELECT team_name, wins
+FROM Team
+WHERE wins > 10;
+
+-- 7: Count players in each position:
+SELECT Player_Position.position_name, COUNT(Player.player_id) AS NumberOfPlayers
+FROM Player
+JOIN Player_Position ON Player.position_id = Player_Position.position_id
+GROUP BY Player_Position.position_name;
+
+-- 8: Show the top 5 players by weight:
+SELECT fname, lname, weight
+FROM Player
+ORDER BY weight DESC
+LIMIT 5;
+
+-- 9: Find the average # of wins for teams in each conference:
+SELECT Conference.conference_name, AVG(Team.wins) AS AvgWins
+FROM Conference
+JOIN Division ON Conference.conference_id = Division.conference_id
+JOIN Team ON Division.division_id = Team.division_id
+GROUP BY Conference.conference_name;
+
+-- 10: Display details of longest game:
+SELECT home_team_id, away_team_id, home_team_score + away_team_score AS TotalScore
+FROM Game
+ORDER BY TotalScore DESC
+LIMIT 1;
