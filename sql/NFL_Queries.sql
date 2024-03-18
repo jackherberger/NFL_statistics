@@ -1331,7 +1331,7 @@ INSERT INTO player_stats VALUES
 (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 252, 2805, 11.13, 34.6, 75, 14, 126, 36, 355, 1428, 'fant noah'),
 (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 26, 8.67, 0.3, 21, 0, 1, 0, 350, 4124, 11.78, 48.0, 75, 20, 208, 60, 501, 1791, 'waller darren');
 
-
+-- add player_id to table
 ALTER TABLE player_stats
 ADD COLUMN player_id INT;
 
@@ -1343,7 +1343,13 @@ JOIN Player AS p ON
 	(LOWER(stats.Player) = LOWER(CONCAT(p.lname, ' ', p.fname)))
     OR
     (LOWER(stats.Player) = LOWER(CONCAT(p.fname, ' ', p.lname)))
+    OR
+    (LOWER(stats.Player) LIKE LOWER(CONCAT(p.lname, '%')))
+    OR
+    (LOWER(stats.Player) LIKE LOWER(CONCAT('%', p.lname)))
 SET stats.player_id = p.player_id;
 
-
+-- now make it a foreign key
+ALTER TABLE player_stats
+ADD FOREIGN KEY (player_id) REFERENCES Player(player_id);
 
